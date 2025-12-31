@@ -1,0 +1,32 @@
+{
+  "cart_title": "Your Shopping Cart",
+  "loading_cart": "Loading your cart...",
+  "empty_cart": "Your cart is empty",
+  "continue_shopping": "Continue Shopping",
+  "subtotal": "Subtotal",
+  "shipping": "Shipping",
+  "free_shipping": "Free",
+  "total": "Total",
+  "proceed_checkout": "Proceed to Checkout",
+  "add_to_cart": "Add to Cart",
+  
+  "messages": {
+    "adding": "Adding...",
+    "updating": "Updating...",
+    "removing": "Removing..."
+  },
+  
+  "errors": {
+    "stock_exceeded": "Quantity exceeds available stock",
+    "update_failed": "Failed to update quantity",
+    "remove_failed": "Failed to remove item"
+  },
+  
+  "labels": {
+    "quantity": "Qty",
+    "price": "Price",
+    "total": "Total",
+    "remove": "Remove",
+    "checkout": "Checkout"
+  }
+}

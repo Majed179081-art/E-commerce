@@ -1,0 +1,1088 @@
+/* =========================
+   Navbar.module.css
+   تصميم حديث، يدعم RTL / LTR
+   ========================= */
+
+/* الجذر */
+.modernNavbar {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 1000;
+  background-color: var(--navbar-bg, #ffffff);
+  color: var(--navbar-text, #222);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  /* 👇 إضافة لمنع تأثيرات التمرير */
+  overscroll-behavior-y: contain;
+}
+
+body[data-theme='dark'] .modernNavbar {
+  background-color: #181818;
+  color: #f5f5f5;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.scrolled {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--navbar-scrolled, rgba(255, 255, 255, 0.95));
+}
+
+body[data-theme='dark'] .scrolled {
+  background-color: rgba(18, 18, 18, 0.9);
+}
+
+/* =========================
+   هيكل النافبار
+   ========================= */
+.navbarContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* =========================
+   القسم الأيسر
+   ========================= */
+.navbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.appName {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.appName:hover {
+  color: var(--accent, #007bff);
+}
+
+.logoImage {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.menuToggle {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* =========================
+   القسم الأوسط (البحث)
+   ========================= */
+.navbarCenter {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+/* بحث */
+.searchForm {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.searchInputContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: var(--search-bg, #f3f3f3);
+  border-radius: 50px;
+  padding: 0.4rem 0.8rem;
+}
+
+body[data-theme='dark'] .searchInputContainer {
+  background-color: #2c2c2c;
+}
+
+.searchIcon {
+  margin-inline-end: 0.5rem;
+  color: var(--accent, #007bff);
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  flex: 1;
+  outline: none;
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+.searchButton {
+  border: none;
+  background-color: var(--accent, #007bff);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.searchButton:hover {
+  background-color: var(--accent-hover, #0056b3);
+}
+
+/* =========================
+   شريط الفئات
+   ========================= */
+.categoriesBar {
+  margin-top: 0.6rem;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease, max-height 0.3s ease, margin-top 0.3s ease;
+  height: auto;
+  overflow: hidden;
+  will-change: opacity, max-height;
+}
+
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  margin-top: 0;
+  visibility: hidden;
+}
+
+.categoriesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.categoryItem {
+  background-color: var(--cat-bg, #eee);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body[data-theme='dark'] .categoryItem {
+  background-color: #333;
+}
+
+.categoryItem:hover {
+  background-color: var(--accent, #007bff);
+  color: white;
+}
+
+.showMoreBtn {
+  border: none;
+  background-color: transparent;
+  color: var(--accent, #007bff);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.showMoreBtn:hover {
+  color: var(--accent-hover, #0056b3);
+}
+
+/* =========================
+   القسم الأيمن
+   ========================= */
+.navbarRight {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* أزرار أيقونات */
+.cartButton,
+.settingsButton {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+  position: relative;
+}
+
+.cartCount {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: var(--accent, #007bff);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 50%;
+  padding: 2px 5px;
+}
+
+/* المستخدم */
+.userSection {
+  position: relative;
+}
+
+.userButton {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.userAvatar {
+  background-color: var(--avatar-bg, #eee);
+  border-radius: 50%;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body[data-theme='dark'] .userAvatar {
+  background-color: #333;
+}
+
+.userMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--menu-bg, #fff);
+  color: inherit;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 0.5rem;
+  overflow: hidden;
+  min-width: 180px;
+  z-index: 999;
+}
+
+body[data-theme='dark'] .userMenu {
+  background-color: #242424;
+}
+
+.userMenuHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body[data-theme='dark'] .userMenuHeader {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menuUserAvatar {
+  background-color: var(--avatar-bg, #eee);
+  padding: 0.4rem;
+  border-radius: 50%;
+}
+
+.menuUserInfo {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.7rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.menuItem:hover {
+  background-color: var(--hover-bg, #f5f5f5);
+}
+
+body[data-theme='dark'] .menuItem:hover {
+  background-color: #333;
+}
+
+.logoutItem {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* أزرار تسجيل الدخول / إنشاء حساب */
+.authButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loginBtn,
+.signupBtn {
+  border: 1px solid var(--accent, #007bff);
+  background: transparent;
+  color: var(--accent, #007bff);
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.loginBtn:hover,
+.signupBtn:hover {
+  background-color: var(--accent, #007bff);
+  color: white;
+}
+
+/* =========================
+   استجابة الموبايل محسنة
+   ========================= */
+@media (max-width: 1200px) {
+  .navbarContainer {
+    padding: 0.75rem 1.25rem;
+  }
+  
+  .searchForm {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbarContainer {
+    padding: 0.7rem 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .menuToggle {
+    display: block;
+  }
+
+  .navbarCenter,
+  .navbarRight {
+    display: none;
+  }
+
+  .mobileVisible {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: inherit;
+    padding: 1rem 0;
+    gap: 1rem;
+    order: 3;
+    margin-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  body[data-theme='dark'] .mobileVisible {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .searchForm {
+    max-width: 90%;
+    width: 100%;
+  }
+  
+  .categoriesBar {
+    width: 100%;
+    max-width: 90%;
+  }
+  
+  .categoriesList {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .categoryItem {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbarContainer {
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .appName {
+    font-size: 1.1rem;
+  }
+  
+  .logoImage {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .menuToggle {
+    font-size: 1.3rem;
+  }
+  
+  .mobileVisible {
+    padding: 0.8rem 0;
+    gap: 0.8rem;
+  }
+  
+  .searchInputContainer {
+    padding: 0.35rem 0.7rem;
+  }
+  
+  .searchInput {
+    font-size: 0.9rem;
+  }
+  
+  .searchButton {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .categoriesList {
+    gap: 0.4rem;
+  }
+  
+  .categoryItem {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .authButtons {
+    gap: 0.4rem;
+  }
+  
+  .loginBtn,
+  .signupBtn {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbarContainer {
+    padding: 0.5rem 0.6rem;
+  }
+  
+  .appName span {
+    display: none;
+  }
+  
+  .appName {
+    gap: 0.2rem;
+  }
+  
+  .logoImage {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .menuToggle {
+    font-size: 1.2rem;
+  }
+  
+  .mobileVisible {
+    padding: 0.7rem 0;
+    gap: 0.7rem;
+  }
+  
+  .searchForm {
+    max-width: 95%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .searchInputContainer {
+    width: 100%;
+  }
+  
+  .searchButton {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .categoriesList {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0.5rem 0;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .categoriesList::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .categoryItem {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  
+  .userButton .userName {
+    display: none;
+  }
+  
+  .authButtons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .loginBtn,
+  .signupBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbarContainer {
+    padding: 0.4rem 0.5rem;
+  }
+  
+  .logoImage {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .menuToggle {
+    font-size: 1.1rem;
+  }
+  
+  .mobileVisible {
+    padding: 0.6rem 0;
+    gap: 0.6rem;
+  }
+  
+  .cartButton,
+  .settingsButton {
+    font-size: 1.1rem;
+  }
+  
+  .cartCount {
+    font-size: 0.65rem;
+    padding: 1px 4px;
+  }
+  
+  .userMenu {
+    min-width: 160px;
+  }
+  
+  .menuItem {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbarContainer {
+    padding: 0.35rem 0.4rem;
+  }
+  
+  .mobileVisible {
+    padding: 0.5rem 0;
+    gap: 0.5rem;
+  }
+  
+  .categoriesList {
+    gap: 0.3rem;
+  }
+  
+  .categoryItem {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* =========================
+   RTL دعم اللغة العربية
+   ========================= */
+body.arabic .navbarContainer {
+  direction: rtl;
+}
+
+body.arabic .searchForm {
+  flex-direction: row-reverse;
+}
+
+body.arabic .searchIcon {
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0;
+}
+
+body.arabic .userMenu {
+  right: auto;
+  left: 0;
+  text-align: right;
+}
+
+body.arabic .menuItem {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+body.arabic .cartCount {
+  left: -6px;
+  right: auto;
+}
+
+body.arabic .userMenuHeader {
+  flex-direction: row-reverse;
+}
+
+body.arabic .authButtons {
+  flex-direction: row-reverse;
+}
+
+.rtlMenu {
+  right: auto !important;
+  left: 0 !important;
+}
+
+/* تحسينات RTL للشاشات الصغيرة */
+@media (max-width: 576px) {
+  body.arabic .searchForm {
+    flex-direction: column;
+  }
+  
+  body.arabic .authButtons {
+    flex-direction: column;
+  }
+}
+/* =========================
+   أزرار جديدة وتحسينات
+   ========================= */
+
+/* تحسين نص الأزرار */
+.buttonText {
+  margin-inline-start: 0.4rem;
+  font-size: 0.9rem;
+}
+
+/* زر الداشبورد */
+.dashboardButton {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.dashboardButton:hover {
+  background-color: var(--hover-bg, #f5f5f5);
+}
+
+body[data-theme='dark'] .dashboardButton:hover {
+  background-color: #333;
+}
+
+/* تحسينات للأزرار في الموبايل */
+@media (max-width: 992px) {
+  .cartButton,
+  .settingsButton,
+  .dashboardButton {
+    font-size: 1.3rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+  }
+  
+  .buttonText {
+    display: none !important;
+  }
+  
+  .cartButton span:not(.cartCount),
+  .settingsButton span,
+  .dashboardButton span {
+    display: none !important;
+  }
+  
+  /* تحسين أزرار الدخول والتسجيل في الموبايل */
+  .authButtons {
+    flex-direction: row !important;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .authButtons button {
+    background-color: var(--accent, #007bff) !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 8px !important;
+    font-size: 0.9rem !important;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .authButtons button:first-child {
+    background-color: transparent !important;
+    color: var(--accent, #007bff) !important;
+    border: 1px solid var(--accent, #007bff) !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .cartButton,
+  .settingsButton,
+  .dashboardButton {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .authButtons {
+    gap: 0.5rem !important;
+  }
+  
+  .authButtons button {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .cartButton,
+  .settingsButton,
+  .dashboardButton {
+    font-size: 1.1rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .authButtons button {
+    padding: 0.35rem 0.7rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* =========================
+   تحسينات RTL
+   ========================= */
+body.arabic .buttonText {
+  margin-inline-end: 0.4rem;
+  margin-inline-start: 0;
+}
+
+/* تحسينات للحالة التحميل */
+.loadingNavbar {
+  background-color: var(--navbar-bg, #ffffff);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.loadingMessage {
+  color: var(--text-muted, #666);
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+body[data-theme='dark'] .loadingMessage {
+  color: #aaa;
+}
+
+/* =========================
+   تصحيح لأزرار المستخدم
+   ========================= */
+.userButton .userName {
+  margin-inline-start: 0.5rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .userButton .userName {
+    display: inline !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .userButton .userName {
+    display: none !important;
+  }
+}
+
+/* تصحيح لمشكلة القائمة المنسدلة */
+.userMenuContainer {
+  position: relative;
+  display: inline-block;
+}
+/* =========================
+   تحسينات شكلية للوغو
+   ========================= */
+.logoImage {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 10px; /* زوايا دائرية لطيفة */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logoImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+body[data-theme='dark'] .logoImage {
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+body[data-theme='dark'] .logoImage:hover {
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* =========================
+   تحسينات القسم الأيمن
+   ========================= */
+.navbarRight {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* تجميع الأزرار في كتل منفصلة */
+.iconButtonsGroup {
+  display: flex;
+  align-items: center;
+  background-color: var(--icon-group-bg, #f8f9fa);
+  border-radius: 12px;
+  padding: 0.3rem 0.5rem;
+  gap: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+body[data-theme='dark'] .iconButtonsGroup {
+  background-color: #2a2a2a;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
+}
+
+.iconButtonsGroup:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme='dark'] .iconButtonsGroup:hover {
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* تحسين الأزرار داخل المجموعة */
+.cartButton,
+.settingsButton,
+.dashboardButton {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cartButton:hover,
+.settingsButton:hover,
+.dashboardButton:hover {
+  background-color: var(--icon-hover-bg, rgba(0, 123, 255, 0.1));
+  transform: translateY(-1px);
+}
+
+body[data-theme='dark'] .cartButton:hover,
+body[data-theme='dark'] .settingsButton:hover,
+body[data-theme='dark'] .dashboardButton:hover {
+  background-color: rgba(0, 123, 255, 0.2);
+}
+
+/* تحسين زر المستخدم */
+.userSection {
+  position: relative;
+}
+
+.userButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  background-color: var(--user-button-bg, #f8f9fa);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+body[data-theme='dark'] .userButton {
+  background-color: #2a2a2a;
+}
+
+.userButton:hover {
+  background-color: var(--user-button-hover, #e9ecef);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+body[data-theme='dark'] .userButton:hover {
+  background-color: #333;
+}
+
+.userAvatar {
+  background-color: var(--avatar-bg, #e9ecef);
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.userButton:hover .userAvatar {
+  background-color: var(--accent, #007bff);
+  color: white;
+  transform: rotate(5deg);
+}
+
+/* تحسين النص داخل زر المستخدم */
+.userButton .userName {
+  margin-inline-start: 0.3rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.userButton:hover .userName {
+  color: var(--accent, #007bff);
+}
+
+/* =========================
+   تحسينات للشاشات الصغيرة
+   ========================= */
+@media (max-width: 992px) {
+  .iconButtonsGroup {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    gap: 0.3rem;
+  }
+  
+  .cartButton,
+  .settingsButton,
+  .dashboardButton {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    background-color: var(--icon-group-bg, #9dc1e2);
+    border-radius: 10px;
+  }
+  
+  .userButton {
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .logoImage {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartButton,
+  .settingsButton,
+  .dashboardButton {
+    font-size: 1.2rem;
+    padding: 0.4rem;
+  }
+  
+  .userButton .userName {
+    font-size: 0.9rem;
+  }
+  
+  .logoImage {
+    width: 36px;
+    height: 36px;
+    border-radius: 7px;
+  }
+}
+
+@media (max-width: 576px) {
+  .iconButtonsGroup {
+    gap: 0.2rem;
+  }
+  
+  .cartButton,
+  .settingsButton,
+  .dashboardButton {
+    font-size: 1.1rem;
+    padding: 0.35rem;
+    border-radius: 8px;
+  }
+  
+  .userButton {
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .logoImage {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoImage {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+  }
+  
+  .cartButton,
+  .settingsButton,
+  .dashboardButton {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+}
+
+/* =========================
+   تحسينات RTL
+   ========================= */
+body.arabic .iconButtonsGroup {
+  flex-direction: row-reverse;
+}
+
+body.arabic .userButton {
+  flex-direction: row-reverse;
+}
+
+body.arabic .userButton .userName {
+  margin-inline-end: 0.3rem;
+  margin-inline-start: 0;
+}

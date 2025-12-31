@@ -1,0 +1,45 @@
+{
+  "app_name": "E-Commerce",
+  "search_placeholder": "Search products...",
+  "search_button": "Search",
+  "show_all_categories": "Show All Categories",
+  "loading_categories": "Loading categories...",
+  "error_loading_categories": "Error loading categories",
+  "cart_title": "Your Shopping Cart",
+  "settings": "Settings",
+  "my_profile": "My Profile",
+  "my_orders": "My Orders",
+  "logout": "Logout",
+  "login": "Login",
+  "register": "Register",
+  "logout_failed": "Logout failed",
+  "loading_user": "Loading user data...",
+  
+  "nav": {
+    "cart": "Cart",
+    "view_cart": "View Cart",
+    "settings": "Settings",
+    "dashboard": "Dashboard",
+    "admin_dashboard": "Admin Dashboard",
+    "account_menu": "Account Menu",
+    "my_profile": "My Profile",
+    "my_orders": "My Orders",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register"
+  },
+  
+  "user": {
+    "default_email": "user@example.com",
+    "avatar_alt": "User Avatar",
+    "menu_title": "User Menu"
+  },
+  
+  "accessibility": {
+    "menu_toggle": "Toggle menu",
+    "user_menu": "User account menu",
+    "cart_button": "Open shopping cart",
+    "settings_button": "Open settings",
+    "dashboard_button": "Open dashboard"
+  }
+}

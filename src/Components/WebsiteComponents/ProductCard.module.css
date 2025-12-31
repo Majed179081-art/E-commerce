@@ -1,0 +1,254 @@
+/* ================== CARD ================== */
+.productCard {
+  background: var(--card-bg, white);
+  color: var(--text-color, #2c3e50);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  height: 100%;
+  max-width: 320px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.productCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* ================== RTL / LTR ================== */
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+.arabic {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ================== IMAGE ================== */
+.imageSection {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.productCard:hover .productImage {
+  transform: scale(1.08);
+}
+
+/* ================== DISCOUNT ================== */
+.discountBadge {
+  position: absolute;
+  top: 15px;
+  inset-inline-end: 15px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+/* ================== INFO ================== */
+.infoSection {
+  padding: 24px;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+/* ================== TITLE ================== */
+.productTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  word-break: break-word;
+}
+
+/* ================== RATING ================== */
+.ratingSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.goldStar {
+  color: #ffd700;
+  font-size: 16px;
+}
+
+.grayStar {
+  color: #cccccc;
+  font-size: 16px;
+}
+
+.ratingText {
+  font-size: 14px;
+  color: var(--text-muted, #666);
+}
+
+/* ================== DESCRIPTION ================== */
+.productDescription {
+  color: var(--text-muted, #666);
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  word-break: break-word;
+  min-width: 0;
+}
+
+/* ================== PRICE ================== */
+.priceSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+
+  min-width: 0;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 16px;
+}
+
+.discountedPrice {
+  color: #e74c3c;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.normalPrice {
+  color: var(--text-color, #2c3e50);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* ================== BUTTONS ================== */
+.actionButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+
+  min-width: 0;
+}
+
+.viewButton,
+.addToCartButton {
+  flex: 1;
+  min-width: 0;
+
+  padding: 14px 18px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  white-space: normal;
+  word-break: break-word;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.viewButton {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+}
+
+.viewButton:hover {
+  transform: translateY(-2px);
+}
+
+.addToCartButton {
+  background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+  color: white;
+}
+
+.addToCartButton:hover {
+  transform: translateY(-2px);
+}
+
+/* ================== DARK MODE ================== */
+[data-theme='dark'] .productCard {
+  background: #1e1e1e;
+  color: #f5f5f5;
+}
+
+[data-theme='dark'] .productDescription,
+[data-theme='dark'] .ratingText {
+  color: #bbb;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .productCard {
+    max-width: 100%;
+  }
+
+  .imageSection {
+    height: 220px;
+  }
+
+  .infoSection {
+    padding: 20px;
+  }
+
+  .productTitle {
+    font-size: 18px;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+  }
+}

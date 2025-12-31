@@ -1,0 +1,45 @@
+{
+  "app_name": "التجارة الإلكترونية",
+  "search_placeholder": "ابحث عن منتجات...",
+  "search_button": "بحث",
+  "show_all_categories": "عرض كل الفئات",
+  "loading_categories": "جارٍ تحميل الفئات...",
+  "error_loading_categories": "خطأ في تحميل الفئات",
+  "cart_title": "عربة التسوق الخاصة بك",
+  "settings": "الإعدادات",
+  "my_profile": "ملفي الشخصي",
+  "my_orders": "طلباتي",
+  "logout": "تسجيل الخروج",
+  "login": "تسجيل الدخول",
+  "register": "إنشاء حساب",
+  "logout_failed": "فشل تسجيل الخروج",
+  "loading_user": "جاري تحميل بيانات المستخدم...",
+  
+  "nav": {
+    "cart": "السلة",
+    "view_cart": "عرض السلة",
+    "settings": "الإعدادات",
+    "dashboard": "لوحة التحكم",
+    "admin_dashboard": "لوحة تحكم المدير",
+    "account_menu": "قائمة الحساب",
+    "my_profile": "ملفي الشخصي",
+    "my_orders": "طلباتي",
+    "logout": "تسجيل الخروج",
+    "login": "تسجيل الدخول",
+    "register": "إنشاء حساب"
+  },
+  
+  "user": {
+    "default_email": "مستخدم@example.com",
+    "avatar_alt": "صورة المستخدم",
+    "menu_title": "قائمة المستخدم"
+  },
+  
+  "accessibility": {
+    "menu_toggle": "تبديل القائمة",
+    "user_menu": "قائمة حساب المستخدم",
+    "cart_button": "فتح عربة التسوق",
+    "settings_button": "فتح الإعدادات",
+    "dashboard_button": "فتح لوحة التحكم"
+  }
+}

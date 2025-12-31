@@ -1,0 +1,116 @@
+{
+  "products": "المنتجات",
+  "categories": "الفئات",
+  "price": "السعر",
+  "description": "الوصف",
+  "quantity": "الكمية",
+  "stock": "المخزون",
+  "discount": "الخصم",
+  "view_details": "عرض التفاصيل",
+  "add_to_cart": "أضف إلى السلة",
+  "buyNow": "اشتري الآن",
+  "continue_shopping": "مواصلة التسوق",
+  
+  "product": {
+    "notFound": "المنتج غير موجود",
+    "missing": "المنتج الذي تبحث عنه غير موجود أو تم إزالته.",
+    "description": "الوصف",
+    "noDescription": "لا يوجد وصف متاح لهذا المنتج.",
+    "about": "حول هذا المنتج"
+  },
+  
+  "cart": {
+    "title": "عربة التسوق الخاصة بك",
+    "loading_cart": "جارٍ تحميل العربة...",
+    "empty_cart": "عربتك فارغة",
+    "subtotal": "المجموع الفرعي",
+    "shipping": "الشحن",
+    "free_shipping": "مجاني",
+    "total": "الإجمالي",
+    "proceed_checkout": "المتابعة للدفع",
+    "added": "تم إضافة {{title}} إلى السلة بنجاح"
+  },
+  
+  "search": {
+    "placeholder": "ابحث عن منتجات...",
+    "button": "بحث",
+    "searching_products": "جارٍ البحث عن المنتجات...",
+    "search_results_for": "نتائج البحث عن",
+    "single_product_found": "منتج تم العثور عليه",
+    "multiple_products_found": "منتجات تم العثور عليها",
+    "no_products_found": "لم يتم العثور على منتجات",
+    "try_different_keywords": "جرّب كلمات مفتاحية مختلفة أو تصفح الفئات",
+    "suggestions": "اقتراحات",
+    "check_spelling": "تحقق من الإملاء",
+    "use_general_terms": "استخدم كلمات أكثر عمومية",
+    "browse_by_category": "تصفح حسب الفئة",
+    "back_to_homepage": "العودة إلى الصفحة الرئيسية"
+  },
+  
+  "reviews": {
+    "count": "{{count}} تقييم"
+  },
+  
+  "price_display": {
+    "save": "وفر {{discount}}%"
+  },
+  
+  "category": {
+    "products": "منتجات الفئة",
+    "all_categories": "كل الفئات",
+    "show_all_categories": "عرض كل الفئات",
+    "loading_categories": "جارٍ تحميل الفئات...",
+    "error_loading_categories": "خطأ في تحميل الفئات",
+    "browse_categories_subtitle": "تصفح مجموعتنا الواسعة من الفئات",
+    "search_categories_placeholder": "ابحث في الفئات...",
+    "loading_categories_message": "جارٍ تحميل الفئات...",
+    "error_loading_categories_message": "حدث خطأ أثناء تحميل الفئات",
+    "explore_products": "استعرض المنتجات",
+    "explore_category_text": "تصفح منتجاتنا في هذه الفئة",
+    "no_categories_message": "لم يتم العثور على فئات",
+    "try_adjusting_search": "جرّب تعديل كلمات البحث",
+    "load_more_categories": "تحميل المزيد من الفئات",
+    "no_categories_found": "لم يتم العثور على فئات",
+    "try_adjust_search": "جرّب تعديل كلمات البحث"
+  },
+  
+  "collections": {
+    "latest_products": "أحدث المنتجات",
+    "check_newest_arrivals": "اطّلع على أحدث الإصدارات لدينا",
+    "failed_to_load_latest_products": "فشل في تحميل أحدث المنتجات. يرجى المحاولة مرة أخرى.",
+    "no_latest_products": "لا توجد منتجات حديثة متاحة",
+    "hot_deals": "عروض ساخنة",
+    "failed_to_load_sales": "فشل في تحميل منتجات التخفيضات",
+    "no_sales_available": "لا توجد عروض متاحة حالياً",
+    "top_rated_products": "الأعلى تقييمًا",
+    "top_rated_subtitle": "اكتشف المنتجات الأعلى تقييمًا والمحبوبة من عملائنا.",
+    "no_top_rated_products": "لا توجد منتجات الأعلى تقييمًا متاحة حاليًا.",
+    "failed_to_load_top_rated": "فشل تحميل المنتجات الأعلى تقييمًا. يرجى التحقق من الاتصال."
+  },
+  
+  "pages": {
+    "no_products": "لا توجد منتجات متاحة الآن.",
+    "loading_products": "جارٍ تحميل المنتجات...",
+    "failed_to_load_products": "حدث خطأ أثناء تحميل منتجات هذه الفئة. يُرجى المحاولة لاحقًا.",
+    "explore_category_products": "اكتشف {{count}} منتجًا رائعًا في هذه الفئة",
+    "no_products_in_category": "لا توجد منتجات في هذه الفئة بعد.",
+    "back_to_home": "العودة إلى الصفحة الرئيسية",
+    "untitled_product": "منتج بدون اسم",
+    "no_description": "لا يوجد وصف متاح"
+  },
+    "category_pages": {
+    "browse_categories": "تصفح مجموعتنا الواسعة من الفئات",
+    "default_category_description": "استكشف منتجات رائعة في هذه الفئة",
+    "explore_products": "استعرض المنتجات",
+    "load_more_categories": "تحميل المزيد من الفئات",
+    "search_categories_placeholder": "ابحث في الفئات...",
+    "loading_categories": "جارٍ تحميل الفئات...",
+    "error_loading_categories": "حدث خطأ أثناء تحميل الفئات",
+    "try_again": "إعادة المحاولة",
+    "no_categories_found": "لم يتم العثور على فئات",
+    "try_adjust_search": "جرّب تعديل كلمات البحث",
+    "placeholder_image": "الفئة",
+    "all_categories":"كل الفئات"
+  }
+   
+}

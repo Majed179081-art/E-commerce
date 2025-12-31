@@ -1,0 +1,102 @@
+{
+  "app_name": "التجارة الإلكترونية",
+  "welcome": "مرحبًا بك في منصة التجارة الإلكترونية!",
+  "language": "اللغة",
+  "theme": "الثيم",
+  "contact_us": "اتصل بنا",
+  
+  "na": "غير متاح",
+  "error": "خطأ",
+  "success": "نجاح",
+  "saving": "جارٍ الحفظ...",
+  "save_changes": "حفظ التغييرات",
+  "product": "منتج",
+  "back_to_orders": "رجوع للطلبات",
+  "loading": "جارٍ التحميل...",
+  "back": "رجوع",
+  "cancel": "إلغاء",
+  "save": "حفظ",
+  
+  "buttons": {
+    "back": "رجوع",
+    "backHome": "العودة للصفحة الرئيسية",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "view": "عرض",
+    "add": "إضافة",
+    "loading": "جاري التحميل...",
+    "tryAgain": "إعادة المحاولة",
+    "proceed": "متابعة",
+    "checking": "جاري التحقق...",
+    "adding": "جاري الإضافة..."
+  },
+  
+  "alerts": {
+    "titles": {
+      "success": "نجاح",
+      "error": "خطأ",
+      "warning": "تحذير",
+      "info": "معلومة",
+      "confirm": "تأكيد الإجراء",
+      "delete": "تأكيد الحذف"
+    },
+    "buttons": {
+      "ok": "حسناً",
+      "confirm": "تأكيد",
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "yes": "نعم",
+      "no": "لا",
+      "save": "حفظ",
+      "discard": "تجاهل",
+      "retry": "إعادة المحاولة",
+      "close": "إغلاق"
+    },
+    "messages": {
+      "delete_warning": "هذا الإجراء لا يمكن التراجع عنه",
+      "delete_confirmation": "هل أنت متأكد من حذف هذا العنصر؟",
+      "update_confirmation": "هل تريد حفظ التغييرات؟",
+      "connection_error": "تعذر الاتصال بالخادم",
+      "server_error": "حدث خطأ في الخادم",
+      "validation_error": "يرجى التحقق من البيانات المدخلة",
+      "not_found": "لم يتم العثور على العنصر المطلوب",
+      "unauthorized": "غير مصرح لك بتنفيذ هذا الإجراء",
+      "forbidden": "ممنوع الوصول إلى هذا المورد"
+    },
+    "states": {
+      "loading": "جاري التحميل...",
+      "saving": "جاري الحفظ...",
+      "processing": "جاري المعالجة...",
+      "please_wait": "يرجى الانتظار..."
+    }
+  },
+  
+  "status": {
+    "pending": "قيد الانتظار",
+    "completed": "مكتملة",
+    "processing": "قيد المعالجة",
+    "shipped": "تم الشحن",
+    "delivered": "تم التوصيل",
+    "cancelled": "تم الإلغاء"
+  },
+  
+  
+  "errors": {
+    "general": "حدث خطأ ما",
+    "network": "خطأ في الشبكة",
+    "required": "هذا الحقل مطلوب",
+    "invalid_email": "عنوان بريد إلكتروني غير صالح",
+    "loadProduct": "فشل تحميل تفاصيل المنتج",
+    "exceedStock": "الكمية تتجاوز المخزون المتاح",
+    "validation": "يرجى التحقق من الكمية",
+    "addCart": "فشل إضافة المنتج إلى السلة"
+  },
+  
+  "meta": {
+    "freeShipping": "شحن مجاني",
+    "returnPolicy": "سياسة إرجاع 30 يوم",
+    "secureCheckout": "دفع آمن"
+  }
+}

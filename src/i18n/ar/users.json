@@ -1,0 +1,71 @@
+{
+  "users": {
+    "page_title": "إدارة المستخدمين",
+    "add_user_button": "إضافة مستخدم جديد",
+    "no_users_found": "لا يوجد مستخدمون",
+    
+    "name_header": "الاسم",
+    "email_header": "البريد الإلكتروني",
+    "role_header": "الدور",
+    "created_at_header": "تاريخ الإنشاء",
+    "updated_at_header": "تاريخ التحديث",
+    
+    "role_admin": "مدير",
+    "role_user": "مستخدم",
+    "role_writer": "كاتب",
+    "role_product_manager": "مدير منتجات",
+    "role_unknown": "غير معروف",
+    
+    "date_not_available": "غير متاح",
+    "invalid_date": "تاريخ غير صالح",
+    "modified_indicator": "(معدل)",
+    "current_user_indicator": "(أنت)",
+    
+    "load_failed": "فشل تحميل المستخدمين. الرجاء المحاولة مرة أخرى.",
+    "search_error": "خطأ في البحث",
+    "search_failed": "فشل البحث عن المستخدمين.",
+    "current_user_error": "فشل تحميل معلومات المستخدم الحالي",
+    
+    "delete_confirmation_title": "تأكيد الحذف",
+    "delete_confirmation_message": "هل أنت متأكد من حذف هذا المستخدم؟ لا يمكن التراجع عن هذا الإجراء.",
+    "self_delete_denied_title": "تم رفض الإجراء",
+    "self_delete_denied_message": "لا يمكنك حذف حسابك الخاص.",
+    
+    "delete_button": "حذف",
+    "cancel_button": "إلغاء",
+    "ok_button": "موافق",
+    "delete_success": "تم حذف المستخدم بنجاح",
+    "delete_failed": "فشل حذف المستخدم",
+    
+    "edit_user_title": "تعديل المستخدم",
+    "add_user_title": "إضافة مستخدم جديد",
+    
+    "name_label": "الاسم الكامل",
+    "name_placeholder": "أدخل الاسم الكامل",
+    "email_label": "البريد الإلكتروني",
+    "email_placeholder": "أدخل البريد الإلكتروني",
+    "password_label": "كلمة المرور",
+    "password_placeholder": "أدخل كلمة مرور آمنة",
+    
+    "role_label": "دور المستخدم",
+    "select_role": "اختر دورًا",
+    "select_user_role": "اختر دور المستخدم",
+    
+    "update_user": {
+      "save_changes": "حفظ التغييرات",
+      "cancel": "إلغاء",
+      "updating": "جاري التحديث...",
+      "required_fields": "الرجاء ملء جميع الحقول المطلوبة",
+      "update_failed": "فشل تحديث المستخدم. الرجاء المحاولة مرة أخرى.",
+      "update_success": "تم تحديث المستخدم بنجاح"
+    },
+    
+    "add_user": {
+      "add_button": "إضافة مستخدم",
+      "adding": "جاري الإضافة...",
+      "required_fields": "الرجاء ملء جميع الحقول المطلوبة",
+      "add_failed": "فشل إضافة المستخدم. الرجاء المحاولة مرة أخرى.",
+      "add_success": "تم إضافة المستخدم بنجاح"
+    }
+  }
+}

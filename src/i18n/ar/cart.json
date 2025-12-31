@@ -1,0 +1,32 @@
+{
+  "cart_title": "عربة التسوق الخاصة بك",
+  "loading_cart": "جارٍ تحميل العربة...",
+  "empty_cart": "عربتك فارغة",
+  "continue_shopping": "مواصلة التسوق",
+  "subtotal": "المجموع الفرعي",
+  "shipping": "الشحن",
+  "free_shipping": "مجاني",
+  "total": "الإجمالي",
+  "proceed_checkout": "المتابعة للدفع",
+  "add_to_cart": "أضف إلى السلة",
+  
+  "messages": {
+    "adding": "جاري الإضافة...",
+    "updating": "جاري التحديث...",
+    "removing": "جاري الحذف..."
+  },
+  
+  "errors": {
+    "stock_exceeded": "الكمية تتجاوز المخزون المتاح",
+    "update_failed": "فشل تحديث الكمية",
+    "remove_failed": "فشل حذف المنتج"
+  },
+  
+  "labels": {
+    "quantity": "الكمية",
+    "price": "السعر",
+    "total": "المجموع",
+    "remove": "حذف",
+    "checkout": "الدفع"
+  }
+}

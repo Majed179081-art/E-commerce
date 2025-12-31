@@ -1,0 +1,50 @@
+{
+  "searching_products": "Searching products...",
+  "search_results_for": "Search results for",
+  "single_product_found": "product found",
+  "multiple_products_found": "products found",
+  "no_products_found": "No products found",
+  "try_different_keywords": "Try using different keywords or check your search terms",
+  "suggestions": "Suggestions",
+  "check_spelling": "Check for spelling mistakes",
+  "use_general_terms": "Use more general terms",
+  "browse_by_category": "Browse by category",
+  "back_to_homepage": "Back to Homepage",
+  
+  "filters": {
+    "sort_by": "Sort by",
+    "price_low_high": "Price: Low to High",
+    "price_high_low": "Price: High to Low",
+    "newest": "Newest",
+    "popular": "Most Popular",
+    "apply_filters": "Apply Filters",
+    "clear_filters": "Clear All"
+  },
+  
+  "search": {
+    "placeholder": "Search products...",
+    "button": "Search",
+    "advanced_search": "Advanced Search",
+    "recent_searches": "Recent Searches",
+    "clear_history": "Clear History"
+  },
+  
+  "messages": {
+    "search_started": "Searching...",
+    "search_completed": "Search completed",
+    "search_failed": "Search failed. Please try again.",
+    "loading_more": "Loading more products..."
+  },
+  
+  "categories": {
+    "all_categories": "All Categories",
+    "filter_by_category": "Filter by category"
+  },
+  
+  "accessibility": {
+    "search_input": "Product search input",
+    "search_button": "Execute search",
+    "filter_button": "Open filter options",
+    "sort_button": "Open sort options"
+  }
+}

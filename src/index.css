@@ -1,0 +1,178 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-body, #f5f6fa);
+  color: var(--text-main, #2c3e50);
+  line-height: 1.6;
+}
+
+/* RTL Base Styles */
+body.arabic {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+/* LTR Base Styles */
+body.ltr {
+  font-family: 'Roboto', sans-serif;
+  direction: ltr;
+  text-align: left;
+}
+
+/* Theme Application */
+body[data-theme='dark'] {
+  background-color: #121212;
+  color: #fff;
+}
+
+body[data-theme='light'] {
+  background-color: #fff;
+  color: #000;
+}
+
+/* App Container */
+.App {
+  background-color: inherit !important;
+  color: inherit !important;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Smooth Transitions for All Elements */
+* {
+  transition: background-color 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              transform 0.3s ease;
+}
+
+/* LTR Protection for Specific Elements */
+.no-flip,
+.ltr-protected {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Form Input Protection in RTL */
+body.arabic input[type="email"],
+body.arabic input[type="password"],
+body.arabic input[type="text"],
+body.arabic input[type="tel"],
+body.arabic input[type="number"],
+body.arabic textarea:not(.rtl-supported),
+body.arabic .ltr-protected {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Search Box RTL Adjustments */
+.search-box {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+body.arabic .search-box {
+  flex-direction: row-reverse;
+}
+
+body.arabic .search-box input,
+body.arabic .search-box button {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Icon and Number Protection */
+.icon-protected,
+.number-protected {
+  direction: ltr !important;
+  display: inline-block;
+}
+
+/* Home Page Specific Styles */
+.homePage,
+.heroSection {
+  background-color: transparent !important;
+}
+
+/* Loading States */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  background-color: transparent;
+}
+
+/* Ensure Bootstrap Compatibility */
+.container,
+.container-fluid {
+  background-color: inherit;
+}
+
+.row {
+  background-color: transparent;
+}
+
+/* Button Base Styles */
+.btn {
+  transition: all 0.3s ease;
+}
+
+/* Card Base Styles */
+.card {
+  background-color: var(--card-bg, #ffffff);
+  border-color: var(--border-color, #e1e8ed);
+  color: var(--text-main, #2c3e50);
+  transition: all 0.3s ease;
+}
+
+/* Modal Base Styles */
+.modal-content {
+  background-color: var(--card-bg, #ffffff);
+  color: var(--text-main, #2c3e50);
+}
+
+/* Navigation Base Styles */
+.navbar {
+  background-color: var(--card-bg, #ffffff);
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design Base */
+@media (max-width: 768px) {
+  body.arabic {
+    font-size: 14px;
+  }
+  
+  body.ltr {
+    font-size: 14px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}

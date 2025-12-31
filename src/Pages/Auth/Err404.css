@@ -1,0 +1,134 @@
+/* تنسيقات عامة لصفحة الخطأ */
+.err404-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* لجعل الصفحة تأخذ ارتفاع الشاشة بالكامل */
+    background: linear-gradient(135deg, #667eea, #764ba2); /* تدرج لوني */
+    font-family: 'Poppins', sans-serif; /* خط حديث */
+    color: white; /* لون النص */
+    text-align: center;
+    padding: 20px;
+    overflow: hidden; /* لإخفاء أي عناصر تخرج عن الحدود */
+    position: relative; /* للخلفية المتحركة */
+}
+
+/* خلفية متحركة */
+.err404-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); /* تدرج شفاف */
+    animation: rotateBackground 20s linear infinite; /* حركة دائرية */
+    z-index: 1; /* وضع الخلفية خلف المحتوى */
+}
+
+@keyframes rotateBackground {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.err404-content {
+    background: rgba(255, 255, 255, 0.1); /* خلفية شبه شفافة */
+    backdrop-filter: blur(10px); /* تأثير ضبابي */
+    padding: 40px;
+    border-radius: 15px; /* زوايا مدورة */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* ظل عميق */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* حدود شفافة */
+    max-width: 500px; /* عرض محدد للمحتوى */
+    width: 100%;
+    position: relative; /* لوضع العناصر فوق الخلفية المتحركة */
+    z-index: 2; /* وضع المحتوى فوق الخلفية المتحركة */
+    animation: fadeIn 1.5s ease-in-out; /* ظهور تدريجي */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.err404-title {
+    font-size: 4rem; /* حجم كبير للعنوان */
+    font-weight: 700; /* سمك الخط */
+    margin-bottom: 20px;
+    color: white; /* لون أبيض */
+    animation: bounce 2s infinite; /* حركة نط */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.err404-message {
+    font-size: 1.5rem; /* حجم متوسط للرسالة */
+    font-weight: 500; /* سمك متوسط */
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9); /* لون أبيض شفاف */
+    animation: slideIn 1s ease-in-out; /* ظهور من الجانب */
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.err404-description {
+    font-size: 1rem; /* حجم صغير للوصف */
+    color: rgba(255, 255, 255, 0.7); /* لون أبيض شفاف أكثر */
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out; /* ظهور تدريجي */
+}
+
+.err404-home-link {
+    display: inline-block;
+    padding: 12px 30px;
+    background: white; /* لون أبيض للزر */
+    color: #667eea; /* لون أزرق للنص */
+    border-radius: 30px; /* زوايا مدورة بشكل كبير */
+    text-decoration: none; /* إزالة التسطير */
+    font-size: 1rem;
+    font-weight: 600; /* سمك الخط */
+    transition: all 0.3s ease; /* تأثير انتقالي */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* ظل للزر */
+    animation: pulse 2s infinite; /* حركة نبض */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.err404-home-link:hover {
+    background: #667eea; /* لون أزرق عند التمرير */
+    color: white; /* لون أبيض للنص */
+    transform: translateY(-3px); /* تحريك الزر لأعلى قليلاً */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* ظل أكبر عند التمرير */
+}

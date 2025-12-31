@@ -1,0 +1,285 @@
+/* ✅ الخلفية الديكورية - تظل موجودة في كل الثيمات */
+.bgImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../../../Images/pexels-karolina-grabowska-5632371 (1).jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: brightness(0.9);
+  transition: filter 0.4s ease;
+}
+
+/* جعل الصورة أغمق شوية في الثيم الداكن */
+[data-theme='dark'] .bgImage {
+  filter: brightness(0.5) saturate(0.8);
+}
+
+/* الصفحة العامة */
+.homePage {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ===== قسم الهيرو ===== */
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0 20px;
+  box-sizing: border-box;
+  padding-top: 100px;
+}
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.heroContent {
+  max-width: 800px;
+  z-index: 2;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mainTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white; /* 👈 جعل اللون أبيض دائماً */
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.subTitle {
+  font-size: 1.4rem;
+  color: white; /* 👈 جعل اللون أبيض دائماً */
+  margin-bottom: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.actionBtnContainer {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2.5rem;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 6px 20px var(--shadow-light);
+}
+
+.loginBtn {
+  background: linear-gradient(135deg, var(--btn-gradient-1), var(--btn-gradient-2));
+}
+
+.dashboardBtn {
+  background: linear-gradient(135deg, var(--btn-success-1), var(--btn-success-2));
+}
+
+.actionBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px var(--shadow-light);
+}
+
+.btnIcon {
+  margin-left: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.actionBtn:hover .btnIcon {
+  transform: translateX(5px);
+}
+
+.welcomeMessage {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background-color: var(--overlay-bg);
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 4px 15px var(--shadow-light);
+  color: var(--text-main);
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  max-width: 80%;
+}
+
+/* ===== مؤشر التمرير ===== */
+.scrollIndicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  z-index: 2;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* ===== قسم المنتجات ===== */
+.featuredSection {
+  padding: 80px 20px;
+  background: var(--section-bg);
+  position: relative;
+  z-index: 3;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--text-main);
+  margin-bottom: 50px;
+  font-weight: 700;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--btn-gradient-1), var(--btn-gradient-2));
+  border-radius: 2px;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  margin-top: 40px;
+}
+
+/* ✅ باقي التنسيقات بدون تغيير (responsive وspinner إلخ) */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--btn-gradient-1);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 25px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.noProducts {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--text-sub);
+  font-size: 1.1rem;
+}
+
+/* ===== التصميم المتجاوب ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .heroSection { min-height: 80vh; padding-top: 120px; }
+  .mainTitle { font-size: 3rem; }
+  .subTitle { font-size: 1.2rem; }
+  .actionBtn { padding: 1rem 2rem; font-size: 1rem; }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 500px;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    margin-top: 100px;
+  }
+  .mainTitle { font-size: 2.5rem; }
+  .subTitle { font-size: 1.1rem; }
+  .actionBtnContainer { flex-direction: column; gap: 1rem; }
+  .actionBtn { width: 100%; padding: 1rem; font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .heroSection { margin-top: 50px; }
+  .mainTitle { font-size: 2rem; }
+  .subTitle { font-size: 1rem; }
+}
+.homePage {
+  position: relative;
+  z-index: 1;
+}
+
+.bgImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../../../Images/pexels-karolina-grabowska-5632371 (1).jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: brightness(0.9);
+}
+
+[data-theme='dark'] .bgImage {
+  filter: brightness(0.5) saturate(0.8);
+}
+

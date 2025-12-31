@@ -1,0 +1,45 @@
+{
+  "loading_products": "جاري تحميل المنتجات...",
+  "failed_to_load_products": "فشل تحميل المنتجات. يرجى المحاولة مرة أخرى.",
+  "category_products": "منتجات الفئة",
+  "explore_category_products": "استكشف {{count}} منتج في هذه الفئة",
+  "no_products_in_category": "لا توجد منتجات متاحة في هذه الفئة",
+  "all_categories": "جميع الفئات",
+  "browse_products": "تصفح المنتجات",
+  
+  "category": {
+    "title": "الفئة",
+    "description": "الوصف",
+    "image": "صورة الفئة",
+    "view_all": "عرض الكل",
+    "back_to_categories": "العودة إلى الفئات"
+  },
+  
+  "filters": {
+    "sort_by": "ترتيب حسب",
+    "price_range": "نطاق السعر",
+    "in_stock": "المتاح فقط",
+    "on_sale": "في العرض",
+    "apply": "تطبيق الفلاتر",
+    "clear": "مسح الفلاتر"
+  },
+  
+  "messages": {
+    "loading": "جاري تحميل معلومات الفئة...",
+    "error": "تعذر تحميل الفئة. قد تكون الفئة غير موجودة.",
+    "empty": "هذه الفئة فارغة حالياً.",
+    "suggestions": "حاول تصفح فئات أخرى أو تحقق لاحقاً."
+  },
+  
+  "navigation": {
+    "home": "الرئيسية",
+    "categories": "الفئات",
+    "current_category": "الفئة الحالية"
+  },
+  
+  "accessibility": {
+    "category_image": "صورة فئة {{category}}",
+    "product_grid": "شبكة منتجات لفئة {{category}}",
+    "filter_button": "فتح خيارات التصفية"
+  }
+}

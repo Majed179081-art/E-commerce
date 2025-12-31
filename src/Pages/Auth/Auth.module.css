@@ -1,0 +1,530 @@
+/* src/Pages/Auth/Auth.module.css */
+
+/* Main Container */
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--bg-body, #f8fafc);
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Form Container - Dynamic RTL/LTR Support */
+.form {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 600px;
+    border-radius: 20px;
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* LTR Layout - صورة على اليمين */
+.form:not(.arabic) {
+    background-image: 
+        linear-gradient(105deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 50%, transparent 50%),
+        url('./../../Images/pexels-karolina-grabowska-5632346.jpg');
+    justify-content: flex-start;
+}
+
+/* RTL Layout - صورة على اليسار */
+.form.arabic {
+    background-image: 
+        linear-gradient(105deg, transparent 0%, transparent 50%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0.95) 100%),
+        url('./../../Images/pexels-karolina-grabowska-5632346.jpg');
+    justify-content: flex-end;
+}
+
+.form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+    z-index: -1;
+}
+
+/* Dark Mode Support */
+[data-theme='dark'] .form:not(.arabic) {
+    background-image: 
+        linear-gradient(105deg, rgba(30, 30, 30, 0.95) 0%, rgba(30, 30, 30, 0.95) 50%, transparent 50%),
+        url('./../../Images/pexels-karolina-grabowska-5632346.jpg');
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .form.arabic {
+    background-image: 
+        linear-gradient(105deg, transparent 0%, transparent 50%, rgba(30, 30, 30, 0.95) 50%, rgba(30, 30, 30, 0.95) 100%),
+        url('./../../Images/pexels-karolina-grabowska-5632346.jpg');
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .form::before {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+}
+
+/* Form Wrapper */
+.formWrapper {
+    width: 45%;
+    max-width: 420px;
+}
+
+/* RTL/LTR Form Wrapper Positioning */
+.form:not(.arabic) .formWrapper {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.form.arabic .formWrapper {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Title */
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2.5rem !important;
+    text-align: center;
+}
+
+[data-theme='dark'] .title {
+    background: linear-gradient(135deg, #8e44ad 0%, #3498db 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Form Groups */
+.formGroup {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* RTL/LTR Text Alignment */
+.form:not(.arabic) .formGroup {
+    text-align: left;
+}
+
+.form.arabic .formGroup {
+    text-align: right;
+}
+
+.label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-main, #374151);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* RTL/LTR Label Alignment */
+.form:not(.arabic) .label {
+    text-align: left;
+}
+
+.form.arabic .label {
+    text-align: right;
+}
+
+/* Input Fields */
+.input {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid var(--border-color, #e5e7eb);
+    border-radius: 12px;
+    background: var(--card-bg, #ffffff);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: var(--text-main, #374151);
+    /* حماية اتجاه النص في الحقول */
+    direction: ltr;
+    text-align: left;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 
+        0 0 0 3px rgba(59, 130, 246, 0.1),
+        0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.input::placeholder {
+    color: var(--text-sub, #9ca3af);
+}
+
+[data-theme='dark'] .input {
+    border-color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] .input:focus {
+    border-color: #3b82f6;
+    box-shadow: 
+        0 0 0 3px rgba(59, 130, 246, 0.2),
+        0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Checkbox Styles */
+.rememberMe,
+.terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* RTL/LTR Checkbox Alignment */
+.form:not(.arabic) .rememberMe,
+.form:not(.arabic) .terms {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.form.arabic .rememberMe,
+.form.arabic .terms {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-color, #d1d5db);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: var(--card-bg, #ffffff);
+}
+
+/* RTL/LTR Checkbox Margin */
+.form:not(.arabic) .checkbox {
+    margin-right: 0.75rem;
+    margin-left: 0;
+}
+
+.form.arabic .checkbox {
+    margin-right: 0;
+    margin-left: 0.75rem;
+}
+
+.checkbox:checked {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.checkboxLabel {
+    color: var(--text-sub, #6b7280);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* RTL/LTR Text Alignment for Labels */
+.form:not(.arabic) .checkboxLabel {
+    text-align: left;
+}
+
+.form.arabic .checkboxLabel {
+    text-align: right;
+}
+
+/* Submit Button */
+.submitButton {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.submitButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.submitButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+[data-theme='dark'] .submitButton {
+    background: linear-gradient(135deg, #8e44ad 0%, #3498db 100%);
+    box-shadow: 0 4px 15px rgba(142, 68, 173, 0.4);
+}
+
+[data-theme='dark'] .submitButton:hover:not(:disabled) {
+    box-shadow: 0 6px 20px rgba(142, 68, 173, 0.6);
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+    color: var(--text-sub, #9ca3af);
+    font-size: 0.9rem;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--border-color, #e5e7eb);
+    z-index: 1;
+}
+
+.divider span {
+    background: var(--card-bg, white);
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Google Button */
+.googleButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.875rem 2rem;
+    border: 2px solid var(--border-color, #e5e7eb);
+    border-radius: 12px;
+    background: var(--card-bg, white);
+    color: var(--text-main, #374151);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.googleButton:hover {
+    border-color: #3b82f6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .googleButton:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.googleIcon {
+    width: 20px;
+    height: 20px;
+}
+
+/* RTL/LTR Google Icon Margin */
+.form:not(.arabic) .googleIcon {
+    margin-right: 0.75rem;
+    margin-left: 0;
+}
+
+.form.arabic .googleIcon {
+    margin-right: 0;
+    margin-left: 0.75rem;
+}
+
+.googleIcon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Error Message */
+.error {
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #fecaca;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+[data-theme='dark'] .error {
+    background: #2a1a1a;
+    color: #fca5a5;
+    border-color: #7f1d1d;
+}
+
+/* Footer Links */
+.footer {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.footer p {
+    color: var(--text-sub, #6b7280);
+    margin: 0;
+}
+
+.link {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+[data-theme='dark'] .link {
+    color: #60a5fa;
+}
+
+[data-theme='dark'] .link:hover {
+    color: #93c5fd;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .formWrapper {
+        width: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .form:not(.arabic) {
+        background-image: 
+            linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+            url('../../Images/pexels-karolina-grabowska-5632346.jpg');
+        justify-content: center;
+    }
+    
+    .form.arabic {
+        background-image: 
+            linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+            url('../../Images/pexels-karolina-grabowska-5632346.jpg');
+        justify-content: center;
+    }
+    
+    [data-theme='dark'] .form:not(.arabic) {
+        background-image: 
+            linear-gradient(rgba(30, 30, 30, 0.95), rgba(30, 30, 30, 0.95)),
+            url('../../Images/pexels-karolina-grabowska-5632346.jpg');
+    }
+    
+    [data-theme='dark'] .form.arabic {
+        background-image: 
+            linear-gradient(rgba(30, 30, 30, 0.95), rgba(30, 30, 30, 0.95)),
+            url('../../Images/pexels-karolina-grabowska-5632346.jpg');
+    }
+    
+    .formWrapper {
+        width: 70%;
+        max-width: 400px;
+    }
+    
+    .form:not(.arabic) .formWrapper,
+    .form.arabic .formWrapper {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .form {
+        padding: 30px 25px;
+        min-height: 500px;
+    }
+    
+    .formWrapper {
+        width: 85%;
+    }
+    
+    .title {
+        font-size: 2rem;
+        margin-bottom: 2rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .form {
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+    
+    .formWrapper {
+        width: 95%;
+    }
+    
+    .title {
+        font-size: 1.75rem;
+    }
+    
+    .input {
+        padding: 0.875rem 1rem;
+    }
+    
+    .submitButton,
+    .googleButton {
+        padding: 0.875rem 1.5rem;
+    }
+    
+    /* RTL/LTR Mobile Adjustments */
+    .form:not(.arabic) .rememberMe,
+    .form:not(.arabic) .terms {
+        flex-direction: row;
+    }
+    
+    .form.arabic .rememberMe,
+    .form.arabic .terms {
+        flex-direction: row-reverse;
+    }
+    
+    .form:not(.arabic) .checkbox {
+        margin-right: 0.5rem;
+        margin-left: 0;
+    }
+    
+    .form.arabic .checkbox {
+        margin-right: 0;
+        margin-left: 0.5rem;
+    }
+}

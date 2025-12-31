@@ -1,0 +1,678 @@
+/* EditOrder.module.css - Optimized with Theme Support */
+
+/* Main Container */
+.editOrderContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.headerLeft h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.orderInfoHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.orderNumberHeader {
+  background-color: #6366f1;
+  color: white;
+  padding: 0.375rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.orderDateHeader,
+.orderTotalHeader {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.backBtn {
+  background-color: #f3f4f6;
+  color: #374151;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid #d1d5db;
+}
+
+.backBtn:hover {
+  background-color: #e5e7eb;
+  text-decoration: none;
+}
+
+/* Content Layout */
+.editContent {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .editContent {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Order Summary */
+.orderSummary {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  align-self: start;
+  position: sticky;
+  top: 1rem;
+}
+
+.orderSummary h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.summaryDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summaryLabel {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.summaryValue {
+  font-weight: 500;
+  color: #333;
+}
+
+.statusBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.statusPending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.statusDisabled {
+  background-color: #e5e7eb;
+  color: #6b7280;
+}
+
+/* Items Preview */
+.itemsPreview {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.itemsPreview h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.previewItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.previewItem:hover {
+  background-color: #f3f4f6;
+}
+
+.previewImage {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.previewDetails h5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.previewPrice {
+  font-size: 0.8125rem;
+  color: #6b7280;
+}
+
+.moreItems {
+  text-align: center;
+  padding: 0.625rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px dashed #d1d5db;
+}
+
+/* Edit Form */
+.editFormContainer {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formSection h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.formDescription {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+  color: #9ca3af;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.formSelect {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+.formHint {
+  color: #6b7280;
+  font-size: 0.8125rem;
+  margin-top: 0.25rem;
+}
+
+/* Warning Message */
+.warningMessage {
+  background-color: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.warningIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.warningContent h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #92400e;
+  margin-bottom: 0.3125rem;
+}
+
+.warningContent p {
+  color: #92400e;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/* Form Actions */
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cancelButton {
+  background: #f3f4f6;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 0.875rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancelButton:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+.cancelButton:disabled {
+  background: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.submitButton {
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.875rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #4f46e5;
+}
+
+.submitButton:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+
+/* Loading & Error States */
+.loadingContainer,
+.errorContainer,
+.notFoundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.25rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinnerSmall {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loadingContainer p,
+.errorContainer p,
+.notFoundContainer p {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.errorContent,
+.notFoundContent {
+  max-width: 500px;
+  padding: 1.875rem;
+}
+
+.errorContent h3,
+.notFoundContent h3 {
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+
+.errorActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.retryButton {
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.625rem 1.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retryButton:hover {
+  background: #4f46e5;
+}
+
+.backButton {
+  background: #f3f4f6;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 0.625rem 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #d1d5db;
+}
+
+.backButton:hover {
+  background: #e5e7eb;
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .editOrderContainer {
+    padding: 1rem;
+  }
+  
+  .pageHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .headerLeft h1 {
+    font-size: 1.5rem;
+  }
+  
+  .orderInfoHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+  }
+  
+  .editFormContainer,
+  .orderSummary {
+    padding: 1.25rem;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+  
+  .cancelButton,
+  .submitButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .previewItem {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+  
+  .previewImage {
+    align-self: center;
+  }
+}
+
+/* 🌗 Theme Support - نفس النمط الموجود في UpdateCategory.css */
+body[data-theme='dark'] .editOrderContainer {
+  background-color: #121212;
+  color: #e4e4e4;
+}
+
+body[data-theme='dark'] .orderSummary,
+body[data-theme='dark'] .editFormContainer {
+  background: #1e1e1e;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  border: 1px solid #444;
+}
+
+body[data-theme='dark'] .headerLeft h1,
+body[data-theme='dark'] .summaryValue,
+body[data-theme='dark'] .previewDetails h5,
+body[data-theme='dark'] .formSection h3,
+body[data-theme='dark'] .formGroup label {
+  color: #e4e4e4;
+}
+
+body[data-theme='dark'] .orderDateHeader,
+body[data-theme='dark'] .orderTotalHeader,
+body[data-theme='dark'] .summaryLabel,
+body[data-theme='dark'] .previewPrice,
+body[data-theme='dark'] .formDescription,
+body[data-theme='dark'] .formHint,
+body[data-theme='dark'] .loadingContainer p,
+body[data-theme='dark'] .errorContainer p,
+body[data-theme='dark'] .notFoundContainer p {
+  color: #a0a0a0;
+}
+
+body[data-theme='dark'] .pageHeader {
+  border-bottom-color: #444;
+}
+
+body[data-theme='dark'] .orderSummary h3,
+body[data-theme='dark'] .formSection h3 {
+  border-bottom-color: #444;
+}
+
+body[data-theme='dark'] .formInput,
+body[data-theme='dark'] .formSelect,
+body[data-theme='dark'] .formTextarea {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #eee;
+}
+
+body[data-theme='dark'] .formInput:focus,
+body[data-theme='dark'] .formSelect:focus,
+body[data-theme='dark'] .formTextarea:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15);
+}
+
+body[data-theme='dark'] .formInput::placeholder,
+body[data-theme='dark'] .formTextarea::placeholder {
+  color: #666;
+}
+
+body[data-theme='dark'] .previewItem {
+  background-color: #222;
+  border: 1px solid #333;
+}
+
+body[data-theme='dark'] .previewItem:hover {
+  background-color: #2a2a2a;
+}
+
+body[data-theme='dark'] .previewImage {
+  border-color: #444;
+}
+
+body[data-theme='dark'] .moreItems {
+  background-color: #222;
+  border-color: #444;
+  color: #a0a0a0;
+}
+
+body[data-theme='dark'] .statusDisabled {
+  background-color: #333;
+  color: #a0a0a0;
+}
+
+body[data-theme='dark'] .backBtn,
+body[data-theme='dark'] .cancelButton,
+body[data-theme='dark'] .backButton {
+  background: #333;
+  color: #ddd;
+  border-color: #444;
+}
+
+body[data-theme='dark'] .backBtn:hover,
+body[data-theme='dark'] .cancelButton:hover:not(:disabled),
+body[data-theme='dark'] .backButton:hover {
+  background: #444;
+}
+
+body[data-theme='dark'] .retryButton {
+  background: #818cf8;
+}
+
+body[data-theme='dark'] .retryButton:hover {
+  background: #6366f1;
+}
+
+body[data-theme='dark'] .warningMessage {
+  background-color: rgba(245, 158, 11, 0.15);
+  border-color: #f59e0b;
+}
+
+body[data-theme='dark'] .warningContent h4,
+body[data-theme='dark'] .warningContent p {
+  color: #f59e0b;
+}
+
+body[data-theme='dark'] .errorContent h3,
+body[data-theme='dark'] .notFoundContent h3 {
+  color: #f87171;
+}
+
+body[data-theme='dark'] .spinner {
+  border-color: #444;
+  border-top-color: #818cf8;
+}
+
+body[data-theme='dark'] .orderNumberHeader {
+  background-color: #818cf8;
+}
+
+/* تحسينات إضافية */
+body[data-theme='dark'] .itemsPreview {
+  border-top-color: #444;
+}
+
+body[data-theme='dark'] .formSection {
+  border-bottom-color: #444;
+}
+
+body[data-theme='dark'] .formActions {
+  border-top-color: #444;
+}
+.loadingContainer {
+  display: flex;
+  flex-direction: column; /* ترتيب عمودي للـ spinner والنص */
+  justify-content: center;
+  align-items: center; /* لمحاذاة كل شيء أفقياً */
+  min-height: 70vh;
+  text-align: center; /* النص في الوسط */
+}
+
+.loadingContainer p {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-top: 1rem; /* مسافة بين spinner والنص */
+}

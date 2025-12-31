@@ -1,0 +1,222 @@
+/* components/Dashboard/Css-files/Settings.module.css */
+
+
+/* ================== الأساسيات العامة ================== */
+.settingsContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  min-height: 600px;
+  color: var(--text-main);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.settingsContainer h1 {
+  color: var(--text-title);
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 15px;
+}
+
+/* ================== الأقسام ================== */
+.settingsSection {
+  background: var(--section-bg);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border-left: 4px solid var(--accent-color);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.settingsSection:hover {
+  background: var(--section-hover-bg);
+  transform: translateX(5px);
+}
+
+.settingsSection h3 {
+  color: var(--text-title);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* ================== Select ================== */
+.select {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px 15px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--input-bg);
+  font-size: 1rem;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+/* ================== Checkbox ================== */
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-sub);
+  transition: color 0.3s ease;
+}
+
+.checkboxLabel:hover {
+  color: var(--text-main);
+}
+
+.checkboxLabel input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--input-bg);
+}
+
+.checkboxLabel input[type="checkbox"]:checked {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* ================== زر الحفظ ================== */
+.saveButton {
+  background: linear-gradient(135deg, var(--btn-gradient-1), var(--btn-gradient-2));
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 30px auto 0;
+  min-width: 200px;
+}
+
+.saveButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--btn-shadow);
+}
+
+.saveButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ================== Loading ================== */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 768px) {
+  .settingsContainer {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .settingsSection {
+    padding: 20px;
+  }
+  
+  .select {
+    max-width: 100%;
+  }
+  
+  .settingsContainer h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .settingsContainer {
+    padding: 15px;
+  }
+  
+  .settingsSection {
+    padding: 15px;
+  }
+  
+  .saveButton {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* ================== Animation ================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================== الثيمات ================== */
+
+/* 💡 الوضع الفاتح */
+:root,
+body[data-theme='light'] {
+  --card-bg: #ffffff;
+  --section-bg: #f8fafc;
+  --section-hover-bg: #edf2f7;
+  --input-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --text-main: #2d3748;
+  --text-sub: #4a5568;
+  --text-title: #1a202c;
+  --accent-color: #667eea;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --btn-gradient-1: #667eea;
+  --btn-gradient-2: #764ba2;
+  --btn-shadow: rgba(102, 126, 234, 0.4);
+  --focus-ring: rgba(102, 126, 234, 0.1);
+}
+
+/* 🌙 الوضع الداكن */
+body[data-theme='dark'] {
+  --card-bg: #1a1a1a;
+  --section-bg: #232323;
+  --section-hover-bg: #2a2a2a;
+  --input-bg: #2c2c2c;
+  --border-color: #3a3a3a;
+  --text-main: #f1f1f1;
+  --text-sub: #cccccc;
+  --text-title: #ffffff;
+  --accent-color: #8b9cf9;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --btn-gradient-1: #667eea;
+  --btn-gradient-2: #764ba2;
+  --btn-shadow: rgba(102, 126, 234, 0.2);
+  --focus-ring: rgba(139, 156, 249, 0.2);
+}

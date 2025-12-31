@@ -1,0 +1,152 @@
+/*
+========================================
+== 1. الثيمات العامة ==
+========================================
+*/
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --accent-start: #ef4444;
+  --accent-end: #dc2626;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1f1f1f;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --accent-start: #f87171;
+  --accent-end: #b91c1c;
+}
+
+/*
+========================================
+== 2. الحاوية الرئيسية (بدون خلفية أو ظل)
+========================================
+*/
+.salesContainer {
+  width: 100%;
+  padding: 60px 20px;
+  margin: 0 auto;
+  background: transparent; /* ❗ لا خلفية */
+  box-shadow: none;        /* ❗ لا ظل */
+  border: none;            /* ❗ لا حدود */
+  transition: all 0.3s ease;
+}
+
+/*
+========================================
+== 3. عنوان القسم ==
+========================================
+*/
+.sectionTitle {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  border-radius: 3px;
+}
+
+/*
+========================================
+== 4. شبكة المنتجات ==
+========================================
+*/
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/*
+========================================
+== 5. حالات الخطأ وعدم وجود بيانات ==
+========================================
+*/
+.errorContainer,
+.noProducts {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--text-secondary);
+}
+
+.errorContainer p {
+  color: var(--accent-end);
+  font-weight: 600;
+}
+
+.retryButton {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.retryButton:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/*
+========================================
+== 6. دعم الاتجاه RTL ==
+========================================
+*/
+[dir="rtl"] .sectionTitle::after {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/*
+========================================
+== 7. التصميم المتجاوب ==
+========================================
+*/
+@media (max-width: 1024px) {
+  .sectionTitle {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .salesContainer {
+    padding: 40px 15px;
+  }
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+  .productsGrid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .salesContainer {
+    padding: 25px 10px;
+  }
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+}

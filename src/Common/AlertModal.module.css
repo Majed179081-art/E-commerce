@@ -1,0 +1,355 @@
+/* 🎨 CSS Variables Based on Theme */
+:root {
+  /* Colors */
+  --alert-primary: #007bff;
+  --alert-success: #28a745;
+  --alert-warning: #ffc107;
+  --alert-danger: #dc3545;
+  --alert-error: #dc3545;
+  --alert-info: #17a2b8;
+  
+  /* Backgrounds */
+  --alert-bg-light: rgba(255, 255, 255, 0.98);
+  --alert-bg-dark: rgba(30, 30, 30, 0.98);
+  --alert-overlay-light: rgba(0, 0, 0, 0.5);
+  --alert-overlay-dark: rgba(0, 0, 0, 0.7);
+  
+  /* Text */
+  --alert-text-light: #333;
+  --alert-text-dark: #f0f0f0;
+  --alert-border-light: rgba(0, 0, 0, 0.1);
+  --alert-border-dark: rgba(255, 255, 255, 0.1);
+  
+  /* Shadows */
+  --alert-shadow-light: 0 20px 60px rgba(0, 0, 0, 0.15);
+  --alert-shadow-dark: 0 20px 60px rgba(0, 0, 0, 0.4);
+  
+  /* Transitions */
+  --alert-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 🌙 Dark Theme Variables */
+[data-theme='dark'] {
+  --alert-primary: #7e9ee6;
+  --alert-success: #4caf50;
+  --alert-warning: #ffd54f;
+  --alert-danger: #ff6b6b;
+  --alert-error: #ff6b6b;
+  --alert-info: #29b6f6;
+}
+
+/* 🎯 Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  background: var(--alert-overlay-light);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--alert-transition);
+  padding: 20px;
+}
+
+.overlayVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+[data-theme='dark'] .overlay {
+  background: var(--alert-overlay-dark);
+}
+
+/* 🎪 Modal Container */
+.container {
+  background: var(--alert-bg-light);
+  border-radius: 16px;
+  box-shadow: var(--alert-shadow-light);
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: translateY(20px) scale(0.95);
+  transition: var(--alert-transition);
+  border: 1px solid var(--alert-border-light);
+}
+
+.overlayVisible .container {
+  transform: translateY(0) scale(1);
+}
+
+[data-theme='dark'] .container {
+  background: var(--alert-bg-dark);
+  color: var(--alert-text-dark);
+  border-color: var(--alert-border-dark);
+  box-shadow: var(--alert-shadow-dark);
+}
+
+/* Modal Types */
+.typeSuccess {
+  border-left: 5px solid var(--alert-success);
+}
+
+.typeError {
+  border-left: 5px solid var(--alert-error);
+}
+
+.typeWarning {
+  border-left: 5px solid var(--alert-warning);
+}
+
+.typeDanger {
+  border-left: 5px solid var(--alert-danger);
+}
+
+.typeInfo {
+  border-left: 5px solid var(--alert-info);
+}
+
+/* 📝 Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid var(--alert-border-light);
+}
+
+[data-theme='dark'] .header {
+  border-bottom-color: var(--alert-border-dark);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.iconSuccess {
+  background: rgba(40, 167, 69, 0.1);
+  color: var(--alert-success);
+}
+
+.iconError, .iconDanger {
+  background: rgba(220, 53, 69, 0.1);
+  color: var(--alert-danger);
+}
+
+.iconWarning {
+  background: rgba(255, 193, 7, 0.1);
+  color: var(--alert-warning);
+}
+
+.iconInfo {
+  background: rgba(23, 162, 184, 0.1);
+  color: var(--alert-info);
+}
+
+.title {
+  flex: 1;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: inherit;
+  opacity: 0.6;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  transition: opacity 0.2s;
+  border-radius: 4px;
+}
+
+.closeButton:hover {
+  opacity: 1;
+}
+
+/* 📄 Body */
+.body {
+  padding: 24px;
+}
+
+.message {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: inherit;
+}
+
+.message p {
+  margin: 0 0 12px;
+}
+
+.message p:last-child {
+  margin-bottom: 0;
+}
+
+/* 🎛️ Footer */
+.footer {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px 24px;
+  border-top: 1px solid var(--alert-border-light);
+}
+
+[data-theme='dark'] .footer {
+  border-top-color: var(--alert-border-dark);
+}
+
+[dir="rtl"] .footer {
+  flex-direction: row-reverse;
+}
+
+/* Buttons */
+.button {
+  flex: 1;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--alert-transition);
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Button Types */
+.confirmButton {
+  background: var(--alert-primary);
+  color: white;
+}
+
+.confirmButtonSuccess {
+  background: var(--alert-success);
+  color: white;
+}
+
+.confirmButtonError {
+  background: var(--alert-error);
+  color: white;
+}
+
+.confirmButtonDanger {
+  background: var(--alert-danger);
+  color: white;
+}
+
+.confirmButtonWarning {
+  background: var(--alert-warning);
+  color: #000;
+}
+
+.confirmButtonInfo {
+  background: var(--alert-info);
+  color: white;
+}
+
+.cancelButton {
+  background: #6c757d;
+  color: white;
+}
+
+[data-theme='dark'] .cancelButton {
+  background: #757575;
+}
+
+/* 🚨 Warning Text */
+.warningText {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid;
+  font-size: 0.95rem;
+}
+
+.warningTextDanger {
+  background: rgba(220, 53, 69, 0.1);
+  border-left-color: var(--alert-danger);
+  color: var(--alert-danger);
+}
+
+.warningTextWarning {
+  background: rgba(255, 193, 7, 0.1);
+  border-left-color: var(--alert-warning);
+  color: var(--alert-warning);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .overlay {
+    padding: 16px;
+  }
+  
+  .container {
+    max-width: 100%;
+    max-height: 95vh;
+  }
+  
+  .header {
+    padding: 20px 20px 12px;
+  }
+  
+  .body {
+    padding: 20px;
+  }
+  
+  .footer {
+    padding: 12px 20px 20px;
+    flex-direction: column;
+  }
+  
+  [dir="rtl"] .footer {
+    flex-direction: column;
+  }
+  
+  .button {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .icon {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+  
+  .title {
+    font-size: 1.1rem;
+  }
+}

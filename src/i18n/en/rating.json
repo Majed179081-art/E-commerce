@@ -1,0 +1,33 @@
+{
+  "rating": {
+    "title": "Ratings & Reviews",
+    "distribution": "Rating Distribution",
+    "yourRating": "Your Rating",
+    "addYourRating": "Add Your Rating",
+    "yourStars": "Your Stars",
+    "stars": "stars",
+    "yourComment": "Your Comment",
+    "commentPlaceholder": "Share your experience with this product...",
+    "addRating": "Add Rating",
+    "updateRating": "Update Rating",
+    "deleteRating": "Delete Rating",
+    "submitRating": "Submit Rating",
+    "submitting": "Submitting...",
+    "allRatings": "All Ratings",
+    "allReviews": "All Reviews",
+    "noRatings": "No ratings yet. Be the first to rate!",
+    "noReviews": "No reviews yet.",
+    "basedOn": "Based on {count} ratings",
+    "reviews": "Reviews",
+    "anonymous": "Anonymous",
+    "approved": "Approved",
+    "pending": "Pending Review",
+    "selectStars": "Please select a star rating",
+    "deleteConfirm": "Are you sure you want to delete your rating?",
+    "deleted": "Your rating has been deleted successfully",
+    "added": "Your rating has been added successfully",
+    "updated": "Your rating has been updated successfully",
+    "error": "An error occurred while submitting your rating",
+    "deleteError": "An error occurred while deleting your rating"
+  }
+}

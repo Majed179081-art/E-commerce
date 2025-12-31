@@ -1,0 +1,559 @@
+/* Topbar.module.css */
+
+/* ===== Top Bar Styles ===== */
+.topBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  z-index: 1000;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-main, #2c3e50);
+  padding: 0 25px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color, rgba(0, 0, 0, 0.05));
+  transition: all 0.3s ease;
+}
+
+.topBarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* الجزء الأيسر */
+.topBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoImage {
+  height: 40px;
+  width: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.logoImage:hover {
+  transform: scale(1.05);
+}
+
+.dashboardTitle {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0;
+  background: linear-gradient(135deg, var(--primary-color, #3498db), var(--text-main, #2c3e50));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.menuButton {
+  background: var(--bg-body, #f8f9fa);
+  border: none;
+  cursor: pointer;
+  color: var(--text-sub, #7f8c8d);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px var(--shadow-medium, rgba(0, 0, 0, 0.05));
+}
+
+.menuButton:hover {
+  background: var(--primary-color, #3498db);
+  color: white;
+  transform: rotate(90deg);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* الجزء الأيمن */
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.iconButton {
+  background: var(--bg-body, #f8f9fa);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-sub, #7f8c8d);
+  position: relative;
+  box-shadow: 0 2px 5px var(--shadow-medium, rgba(0, 0, 0, 0.05));
+}
+
+.iconButton:hover {
+  background: var(--primary-color, #3498db);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.themeButton:hover,
+.languageButton:hover {
+  background: var(--secondary-color, #8e44ad);
+}
+
+/* زر الأنشطة الحديثة */
+.activitiesButton:hover {
+  background: var(--warning-color, #f39c12);
+}
+
+/* زر المخزون المنخفض */
+.stockAlertButton:hover {
+  background: var(--error-color, #e74c3c);
+}
+
+/* زر الإعدادات */
+.settingsButton:hover {
+  background: var(--primary-color, #3498db);
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--error-color, #e74c3c);
+  color: white;
+  font-size: 0.7rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.languageBadge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: var(--secondary-color, #8e44ad);
+  color: white;
+  font-size: 0.6rem;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Dropdown المستخدم ===== */
+
+.userDropdown {
+  background: transparent !important;
+  border: none !important;
+  padding: 5px 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  box-shadow: none !important;
+  transition: all 0.3s ease !important;
+  min-width: 160px !important; /* منع القطع */
+}
+
+.userDropdown::after {
+  display: none !important;
+}
+
+/* تحسين hover في وضع النور */
+.userDropdown:focus, 
+.userDropdown:hover {
+  background: var(--bg-body, #f8f9fa) !important;
+  border-radius: 25px !important;
+}
+
+/* تثبيت الألوان للاسم والدور في وضع النور */
+.userDropdown div {
+  display: flex;
+  flex-direction: column;
+}
+
+.userDropdown span {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-main, #2c3e50) !important; /* لون داكن في وضع النور */
+  transition: color 0.3s ease;
+}
+
+.userDropdown small {
+  font-size: 0.75rem;
+  color: var(--text-sub, #7f8c8d) !important; /* لون ثانوي داكن */
+  transition: color 0.3s ease;
+}
+
+/* تحسين الأيقونة في وضع النور */
+.userDropdown svg {
+  color: var(--primary-color, #3498db) !important; /* لون أيقونة واضح */
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.userDropdown:hover svg {
+  color: white !important;
+}
+
+/* تثبيت ألوان النص عند Hover في وضع النور */
+.userDropdown:hover span {
+  color: var(--primary-color, #3498db) !important;
+}
+
+.userDropdown:hover small {
+  color: var(--text-sub, #7f8c8d) !important;
+}
+
+.userDropdownMenu {
+  border: none !important;
+  box-shadow: 0 5px 20px var(--shadow-medium, rgba(0, 0, 0, 0.1)) !important;
+  border-radius: 12px !important;
+  padding: 10px 0 !important;
+  margin-top: 10px !important;
+  min-width: 220px;
+  background: var(--card-bg, #ffffff) !important;
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.1)) !important;
+  transition: all 0.3s ease !important;
+}
+
+.dropdownItem {
+  padding: 10px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  font-size: 0.9rem !important;
+  color: var(--text-main, #2c3e50) !important;
+  transition: all 0.2s ease !important;
+}
+
+.dropdownItem:hover {
+  background: var(--bg-body, #f8f9fa) !important;
+  color: var(--primary-color, #3498db) !important;
+  padding-left: 25px !important;
+}
+
+.dropdownItemLogout {
+  color: var(--error-color, #e74c3c) !important;
+}
+
+.dropdownItemLogout:hover {
+  color: #c0392b !important;
+  background: rgba(231, 76, 60, 0.1) !important;
+}
+
+/* ===== تحسينات وضع الظلام (Dark Mode) ===== */
+
+:global([data-theme='dark']) .topBar {
+  background: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+:global([data-theme='dark']) .iconButton {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+:global([data-theme='dark']) .iconButton:hover {
+  background: var(--primary-color, #6366f1);
+  box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
+}
+
+:global([data-theme='dark']) .menuButton {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+:global([data-theme='dark']) .menuButton:hover {
+  background: var(--primary-color, #6366f1);
+  box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
+}
+
+/* تحسين dropdown المستخدم في وضع الظلام */
+:global([data-theme='dark']) .userDropdown span {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+:global([data-theme='dark']) .userDropdown small {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+:global([data-theme='dark']) .userDropdown svg {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+:global([data-theme='dark']) .userDropdown:focus,
+:global([data-theme='dark']) .userDropdown:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+:global([data-theme='dark']) .userDropdown:hover span {
+  color: var(--primary-color, #6366f1) !important;
+}
+
+:global([data-theme='dark']) .userDropdown:hover small {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+:global([data-theme='dark']) .userDropdown:hover svg {
+  color: white !important;
+}
+
+:global([data-theme='dark']) .userDropdownMenu {
+  background: var(--card-bg, #1e1e1e) !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+:global([data-theme='dark']) .dropdownItem {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+:global([data-theme='dark']) .dropdownItem:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: var(--primary-color, #6366f1) !important;
+}
+
+:global([data-theme='dark']) .dropdownItemLogout {
+  color: #ff6b6b !important;
+}
+
+:global([data-theme='dark']) .dropdownItemLogout:hover {
+  background: rgba(255, 107, 107, 0.15) !important;
+  color: #ff5252 !important;
+}
+
+/* تحسين dashboard title في وضع الظلام */
+:global([data-theme='dark']) .dashboardTitle {
+  background: linear-gradient(135deg, var(--primary-color, #6366f1), #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== RTL Support ===== */
+:global(body.arabic) .topBarLeft {
+  direction: rtl;
+}
+
+:global(body.arabic) .logoContainer {
+  flex-direction: row-reverse;
+}
+
+:global(body.arabic) .topBarRight {
+  direction: ltr;
+}
+
+:global(body.arabic) .userInfo {
+  align-items: flex-end;
+}
+
+:global(body.arabic) .userDropdownMenu {
+  text-align: right;
+}
+
+:global(body.arabic) .dropdownItem {
+  flex-direction: row-reverse;
+}
+
+:global(body.arabic) .dropdownItem:hover {
+  padding-left: 20px !important;
+  padding-right: 25px !important;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1200px) {
+  .topBar {
+    padding: 0 20px;
+  }
+  
+  .dashboardTitle {
+    font-size: 1.3rem;
+  }
+  
+  .topBarLeft {
+    gap: 15px;
+  }
+  
+  .topBarRight {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .topBar {
+    padding: 0 15px;
+  }
+  
+  .dashboardTitle {
+    font-size: 1.2rem;
+  }
+  
+  .logoImage {
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topBar {
+    height: 60px;
+    padding: 0 12px;
+  }
+  
+  .userDropdown {
+    padding: 5px !important;
+    min-width: auto !important;
+  }
+  
+  .iconButton {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .logoImage {
+    height: 32px;
+  }
+  
+  .dashboardTitle {
+    font-size: 1.1rem;
+  }
+  
+  .menuButton {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .userDropdown div {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .topBar {
+    height: 55px;
+    padding: 0 10px;
+  }
+  
+  .logoImage {
+    height: 30px;
+  }
+  
+  .dashboardTitle {
+    font-size: 1rem;
+  }
+  
+  .menuButton {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .topBarLeft {
+    gap: 10px;
+  }
+  
+  .topBarRight {
+    gap: 8px;
+  }
+  
+  .iconButton {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .notificationBadge {
+    width: 16px;
+    height: 16px;
+    font-size: 0.6rem;
+  }
+  
+  .languageBadge {
+    width: 14px;
+    height: 14px;
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topBar {
+    height: 50px;
+  }
+  
+  .dashboardTitle {
+    display: none;
+  }
+  
+  .logoImage {
+    height: 28px;
+  }
+  
+  .menuButton {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .iconButton {
+    width: 30px;
+    height: 30px;
+  }
+  
+  :global([data-theme='dark']) .topBar {
+    backdrop-filter: blur(20px);
+  }
+}
+
+/* ===== إضافة transition لجميع العناصر ===== */
+.topBar,
+.dashboardTitle,
+.menuButton,
+.iconButton,
+.userDropdown,
+.userDropdown span,
+.userDropdown small,
+.userDropdown svg,
+.userDropdownMenu,
+.dropdownItem {
+  transition: all 0.3s ease !important;
+}
+
+/* تحسينات للأمان */
+.iconButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.iconButton:disabled:hover {
+  background: var(--bg-body, #f8f9fa) !important;
+  color: var(--text-sub, #7f8c8d) !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05) !important;
+}
+
+:global([data-theme='dark']) .iconButton:disabled:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.3) !important;
+}

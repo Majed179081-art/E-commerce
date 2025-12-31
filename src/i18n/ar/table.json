@@ -1,0 +1,81 @@
+{
+  "table": {
+    "search_placeholder": "بحث...",
+    "search_by_title": "بحث بالعنوان...",
+    "filter_by_date": "تصفية بالتاريخ",
+    "add_new": "إضافة جديد",
+    "actions": "الإجراءات",
+    "no_data": "لا توجد بيانات متاحة",
+    "showing": "عرض",
+    "to": "إلى",
+    "of": "من",
+    "items": "عناصر",
+    "items_per_page": "عدد العناصر في الصفحة",
+    "previous": "السابق",
+    "next": "التالي",
+    "more_details": "المزيد",
+    "hide_details": "إخفاء",
+    "view": "عرض",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "confirm_delete": "هل أنت متأكد من حذف هذا العنصر؟",
+    "delete_success": "تم الحذف بنجاح",
+    "delete_error": "فشل في الحذف",
+    "sort_asc": "تصاعدي",
+    "sort_desc": "تنازلي",
+    "clear": "مسح",
+    "loading": "جاري التحميل...",
+    "all": "الكل",
+    
+    "headers": {
+      "id": "رقم",
+      "name": "الاسم",
+      "title": "العنوان",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "status": "الحالة",
+      "role": "الدور",
+      "price": "السعر",
+      "quantity": "الكمية",
+      "total": "الإجمالي",
+      "date": "التاريخ",
+      "created_at": "تاريخ الإنشاء",
+      "updated_at": "تاريخ التحديث",
+      "last_updated": "آخر تحديث",
+      "actions": "الإجراءات",
+      "customer": "العميل",
+      "order_number": "رقم الطلب",
+      "shipping_address": "عنوان الشحن",
+      "payment_method": "طريقة الدفع",
+      "notes": "ملاحظات"
+    },
+    
+    "statuses": {
+      "active": "نشط",
+      "inactive": "غير نشط",
+      "pending": "قيد الانتظار",
+      "completed": "مكتمل",
+      "cancelled": "ملغى",
+      "processing": "قيد المعالجة",
+      "shipped": "تم الشحن",
+      "delivered": "تم التوصيل",
+      "confirmed": "تم التأكيد"
+    },
+    
+    "roles": {
+      "admin": "مدير",
+      "user": "مستخدم",
+      "writer": "كاتب",
+      "product_manager": "مدير منتجات",
+      "customer": "عميل",
+      "unknown": "غير معروف"
+    },
+    
+    "payment_methods": {
+      "cash_on_delivery": "الدفع عند الاستلام",
+      "credit_card": "بطاقة ائتمان",
+      "bank_transfer": "تحويل بنكي",
+      "wallet": "محفظة إلكترونية"
+    }
+  }
+}

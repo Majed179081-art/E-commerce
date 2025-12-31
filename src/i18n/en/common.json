@@ -1,0 +1,102 @@
+{
+  "app_name": "E-Commerce",
+  "welcome": "Welcome to our E-Commerce Platform!",
+  "language": "Language",
+  "theme": "Theme",
+  "contact_us": "Contact Us",
+  
+  "na": "N/A",
+  "error": "Error",
+  "success": "Success",
+  "saving": "Saving...",
+  "save_changes": "Save Changes",
+  "product": "Product",
+  "back_to_orders": "Back to Orders",
+  "loading": "Loading...",
+  "back": "Back",
+  "cancel": "Cancel",
+  "save": "Save",
+  
+  "buttons": {
+    "back": "Back",
+    "backHome": "Back to Home",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "add": "Add",
+    "loading": "Loading...",
+    "tryAgain": "Try Again",
+    "proceed": "Proceed",
+    "checking": "Checking...",
+    "adding": "Adding..."
+  },
+  
+  "alerts": {
+    "titles": {
+      "success": "Success",
+      "error": "Error",
+      "warning": "Warning",
+      "info": "Information",
+      "confirm": "Confirm Action",
+      "delete": "Confirm Delete"
+    },
+    "buttons": {
+      "ok": "OK",
+      "confirm": "Confirm",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "yes": "Yes",
+      "no": "No",
+      "save": "Save",
+      "discard": "Discard",
+      "retry": "Retry",
+      "close": "Close"
+    },
+    "messages": {
+      "delete_warning": "This action cannot be undone",
+      "delete_confirmation": "Are you sure you want to delete this item?",
+      "update_confirmation": "Do you want to save the changes?",
+      "connection_error": "Unable to connect to the server",
+      "server_error": "An error occurred on the server",
+      "validation_error": "Please check the entered data",
+      "not_found": "The requested item was not found",
+      "unauthorized": "You are not authorized to perform this action",
+      "forbidden": "Access to this resource is denied"
+    },
+    "states": {
+      "loading": "Loading...",
+      "saving": "Saving...",
+      "processing": "Processing...",
+      "please_wait": "Please wait..."
+    }
+  },
+  
+  "status": {
+    "pending": "Pending",
+    "completed": "Completed",
+    "processing": "Processing",
+    "shipped": "Shipped",
+    "delivered": "Delivered",
+    "cancelled": "Cancelled"
+  },
+  
+  "errors": {
+    "general": "Something went wrong",
+    "network": "Network error",
+    "required": "This field is required",
+    "invalid_email": "Invalid email address",
+    "loadProduct": "Failed to load product details",
+    "exceedStock": "Quantity exceeds available stock",
+    "validation": "Please check the quantity",
+    "addCart": "Failed to add to cart"
+  },
+  
+  "meta": {
+    "freeShipping": "Free shipping",
+    "returnPolicy": "30-day return policy",
+    "secureCheckout": "Secure checkout"
+  }
+  
+}

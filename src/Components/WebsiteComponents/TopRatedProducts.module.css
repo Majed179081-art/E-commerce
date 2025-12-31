@@ -1,0 +1,163 @@
+/*
+========================================
+== 1. الثيمات العامة ==
+========================================
+*/
+:root {
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --accent-start: #3498db;
+  --accent-end: #8e44ad;
+}
+
+[data-theme="dark"] {
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --accent-start: #60a5fa;
+  --accent-end: #a855f7;
+}
+
+/*
+========================================
+== 2. الحاوية الرئيسية ==
+========================================
+*/
+.topRatedContainer {
+  width: 100%;
+  padding: 60px 20px;
+  margin: 0 auto;
+  background: transparent; /* ❗ بدون خلفية */
+  border: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+/*
+========================================
+== 3. العنوان والوصف ==
+========================================
+*/
+.headerSection {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  border-radius: 3px;
+}
+
+.sectionSubtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/*
+========================================
+== 4. شبكة المنتجات ==
+========================================
+*/
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/*
+========================================
+== 5. حالات الخطأ والتحميل ==
+========================================
+*/
+.errorContainer,
+.noProducts {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--text-secondary);
+}
+
+.errorContainer p {
+  color: var(--accent-end);
+  font-weight: 600;
+}
+
+.retryButton {
+  margin-top: 20px;
+  padding: 12px 26px;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.retryButton:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/*
+========================================
+== 6. دعم الاتجاه RTL ==
+========================================
+*/
+[dir="rtl"] .sectionTitle::after {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/*
+========================================
+== 7. التصميم المتجاوب ==
+========================================
+*/
+@media (max-width: 1024px) {
+  .sectionTitle {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .topRatedContainer {
+    padding: 40px 15px;
+  }
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+  .sectionSubtitle {
+    font-size: 1rem;
+  }
+  .productsGrid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+}

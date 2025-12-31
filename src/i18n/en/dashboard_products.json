@@ -1,0 +1,185 @@
+{
+  "products": {
+    "page_title": "Products Management",
+    "add_button": "Add New Product",
+    "no_data": "No products found",
+    "load_error": "Failed to load products",
+    "delete_title": "Confirm Deletion",
+    "delete_message": "Are you sure you want to delete this product?",
+    "delete_button": "Delete",
+    "delete_error": "Failed to delete product",
+    "cancel_button": "Cancel",
+    "search_by_title": "Search by product name...",
+    "delete_success": "Successfully deleted",
+    "images": "Images",
+    "title": "Product Name",
+    "price": "Price",
+    "created_at": "Created At",
+    "updated_at": "Updated At",
+    
+    "image_alt": "Product image",
+    "image_alt_number": "Product image {{number}}",
+    "no_image": "No Image",
+    "off": "off",
+    "invalid_date": "Invalid date",
+    
+    "low_stock_products": "Low Stock Products",
+    "low_stock_warning": "Low Stock Alert",
+    "low_stock_description": "The following products have stock below 10 units. Consider replenishing inventory.",
+    "search_low_stock": "Search in low stock products...",
+    "no_low_stock_products": "No low stock products found",
+    "show_all_products": "Show All Products",
+    
+    "edit_product": {
+      "title": "Edit Product: {{title}}",
+      "unnamed_product": "Unnamed Product",
+      "fetching_product": "Fetching product data for ID: {{id}}",
+      "product_data_received": "Product data received:",
+      "invalid_data_structure": "Invalid data structure received",
+      "categories_load_warning": "Failed to load categories",
+      "fetch_error": "Error fetching product data",
+      "product_not_found": "Product Not Found",
+      "product_not_found_message": "The requested product could not be found or has been deleted.",
+      "load_failed": "Failed to load product data",
+      "missing_id": "Product ID is missing",
+      "not_found_keyword": "not found",
+      
+      "name_required": "Product name is required",
+      "category_required": "Please select a category",
+      "price_validation": "Please enter a valid price",
+      
+      "max_images_alert": "You can upload up to 5 images only",
+      
+      "request_data_sent": "Sending update request with data:",
+      "image_deleted": "Deleted image with ID: {{imageId}}",
+      "delete_image_failed": "Failed to delete image from server",
+      
+      "update_success": "Product updated successfully!",
+      "update_error": "Error updating product",
+      "endpoint_not_found": "API endpoint not found",
+      "method_not_allowed": "Method not allowed",
+      "data_errors": "Validation errors",
+      "update_failed": "Failed to update product",
+      "network_error": "Network error. Please check your connection",
+      
+      "back_to_products": "Back to Products",
+      
+      "name_label": "Product Name",
+      "name_placeholder": "Enter product name",
+      "price_label": "Price",
+      "stock_label": "Stock Quantity",
+      "discount_label": "Discount (%)",
+      "status_label": "Status",
+      "category_label": "Category",
+      "short_description_label": "Short Description",
+      "full_description_label": "Full Description",
+      "current_images_label": "Current Product Images",
+      "add_new_images_label": "Add New Images",
+      
+      "status_published": "Published",
+      "status_draft": "Draft",
+      "status_archived": "Archived",
+      
+      "select_category": "Select a category",
+      
+      "short_description_placeholder": "Brief description (2-3 lines)",
+      "full_description_placeholder": "Detailed description of the product",
+      
+      "main_image_alt": "Main product image",
+      "secondary_image_alt": "Secondary product image",
+      "additional_images_alt": "Additional product images",
+      "image_unavailable": "Image not available",
+      "no_images_available": "No images available for this product",
+      
+      "choose_files": "Choose Files",
+      "new_image_alt": "New image {{index}}",
+      "gallery_image_alt": "Gallery image {{index}}",
+      
+      "saving": "Saving...",
+      "save_changes": "Save Changes",
+      "cancel": "Cancel"
+    },
+    
+    "add_product": {
+      "title": "Add New Product",
+      "categories_error": "Failed to load categories",
+      "image_type_error": "Only JPEG, PNG and WebP images are allowed",
+      "max_images_error": "Maximum 5 images allowed per product",
+      "required_fields": "Please fill in all required fields",
+      "success_message": "Product added successfully!",
+      "generic_error": "Failed to add product",
+      "connection_error": "Network connection error",
+      
+      "product_info": "Product Information",
+      "category_label": "Category",
+      "select_category": "Select Category",
+      "name_label": "Product Name",
+      "name_placeholder": "Enter product name",
+      "short_description_label": "Short Description",
+      "short_description_placeholder": "Brief product description",
+      "detailed_description_label": "Detailed Description",
+      "detailed_description_placeholder": "Complete product details",
+      
+      "pricing_media": "Pricing & Media",
+      "price_label": "Price",
+      "discount_label": "Discount (%)",
+      "final_price_label": "Final Price",
+      "stock_label": "Stock Quantity",
+      "stock_placeholder": "Enter stock quantity",
+      "images_label": "Product Images",
+      "upload_text": "Click to upload images",
+      "upload_hint": "JPEG, PNG, WebP up to 5MB each (Max 5 images)",
+      "no_images": "No images selected yet",
+      
+      "cancel_button": "Cancel",
+      "save_button": "Save Product"
+    }
+  },
+  
+  "alerts": {
+    "general": {
+      "success": "Operation completed successfully",
+      "error": "An error occurred",
+      "warning": "Warning",
+      "info": "Information",
+      "confirmation": "Confirmation"
+    },
+    
+    "actions": {
+      "confirm": "Confirm",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "save": "Save",
+      "retry": "Retry",
+      "dismiss": "Dismiss",
+      "ok": "OK",
+      "yes": "Yes",
+      "no": "No"
+    },
+    
+    "messages": {
+      "operation_success": "Operation completed successfully",
+      "operation_failed": "Operation failed",
+      "data_saved": "Data saved successfully",
+      "data_updated": "Data updated successfully",
+      "data_deleted": "Data deleted successfully",
+      "network_error": "Network error. Please check your connection",
+      "server_error": "Server error. Please try again later",
+      "validation_error": "Please check the entered data",
+      "unauthorized": "You are not authorized to perform this action",
+      "forbidden": "Access forbidden",
+      "not_found": "Item not found",
+      "timeout": "Request timeout. Please try again",
+      "invalid_data": "Invalid data format",
+      "required_fields": "Please fill in all required fields"
+    },
+    
+    "confirmations": {
+      "delete_item": "Are you sure you want to delete this item?",
+      "delete_multiple": "Are you sure you want to delete selected items?",
+      "unsaved_changes": "You have unsaved changes. Are you sure you want to leave?",
+      "logout": "Are you sure you want to logout?",
+      "cancel_operation": "Are you sure you want to cancel this operation?"
+    }
+  }
+}

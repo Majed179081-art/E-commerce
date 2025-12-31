@@ -1,0 +1,117 @@
+{
+  "products": "Products",
+  "categories": "Categories",
+  "price": "Price",
+  "description": "Description",
+  "quantity": "Quantity",
+  "stock": "Stock",
+  "discount": "Discount",
+  "view_details": "View Details",
+  "add_to_cart": "Add to Cart",
+  "buyNow": "Buy Now",
+  "continue_shopping": "Continue Shopping",
+  
+  "product": {
+    "notFound": "Product Not Found",
+    "missing": "The product you're looking for doesn't exist or has been removed.",
+    "description": "Description",
+    "noDescription": "No description available for this product.",
+    "about": "About this product"
+  },
+  
+  "cart": {
+    "title": "Your Shopping Cart",
+    "loading_cart": "Loading your cart...",
+    "empty_cart": "Your cart is empty",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free_shipping": "Free",
+    "total": "Total",
+    "proceed_checkout": "Proceed to Checkout",
+    "added": "{{title}} added to cart successfully"
+  },
+  
+  "search": {
+    "placeholder": "Search products...",
+    "button": "Search",
+    "searching_products": "Searching for products...",
+    "search_results_for": "Search Results for",
+    "single_product_found": "product found",
+    "multiple_products_found": "products found",
+    "no_products_found": "No products found",
+    "try_different_keywords": "Try different keywords or browse categories",
+    "suggestions": "Suggestions",
+    "check_spelling": "Check your spelling",
+    "use_general_terms": "Use more general terms",
+    "browse_by_category": "Browse by category",
+    "back_to_homepage": "Back to Homepage"
+  },
+  
+  "reviews": {
+    "count": "{{count}} reviews"
+  },
+  
+  "price_display": {
+    "save": "Save {{discount}}%"
+  },
+  
+  "category": {
+    "products": "Category Products",
+    "all_categories": "All Categories",
+    "show_all_categories": "Show All Categories",
+    "loading_categories": "Loading categories...",
+    "error_loading_categories": "Error loading categories",
+    "browse_categories_subtitle": "Browse through our wide range of categories",
+    "search_categories_placeholder": "Search categories...",
+    "loading_categories_message": "Loading categories...",
+    "error_loading_categories_message": "Error Loading Categories",
+    "explore_products": "Explore Products",
+    "explore_category_text": "Explore our products in this category",
+    "no_categories_message": "No categories found",
+    "try_adjusting_search": "Try adjusting your search terms",
+    "load_more_categories": "Load More Categories",
+    "no_categories_found": "No categories found",
+    "try_adjust_search": "Try adjusting your search terms"
+  },
+  
+  "collections": {
+    "latest_products": "Latest Products",
+    "check_newest_arrivals": "Check out our newest arrivals",
+    "failed_to_load_latest_products": "Failed to load latest products. Please try again.",
+    "no_latest_products": "No latest products available",
+    "hot_deals": "Hot Deals",
+    "failed_to_load_sales": "Failed to load sale products",
+    "no_sales_available": "No hot deals available at the moment",
+    "top_rated_products": "Top Rated Products",
+    "top_rated_subtitle": "Discover our highest rated products loved by customers.",
+    "no_top_rated_products": "No top rated products available at the moment.",
+    "failed_to_load_top_rated": "Failed to load top rated products. Please check your connection."
+  },
+  
+  "pages": {
+    "no_products": "No products available now.",
+    "loading_products": "Loading products...",
+    "failed_to_load_products": "Failed to load products for this category. Please try again later.",
+    "explore_category_products": "Explore {{count}} amazing products in this category",
+    "no_products_in_category": "No products found in this category yet.",
+    "back_to_home": "Back to Home",
+    "untitled_product": "Untitled Product",
+    "no_description": "No description available"
+  },
+   "category_pages": {
+    "browse_categories": "Browse through our wide range of categories",
+    "default_category_description": "Explore amazing products in this category",
+    "explore_products": "Explore Products",
+    "load_more_categories": "Load More Categories",
+    "search_categories_placeholder": "Search categories...",
+    "loading_categories": "Loading categories...",
+    "error_loading_categories": "Error Loading Categories",
+    "try_again": "Try Again",
+    "no_categories_found": "No categories found",
+    "try_adjust_search": "Try adjusting your search terms",
+    "placeholder_image": "Category",
+    "all_categories":"All Categories"
+
+  }
+  
+}

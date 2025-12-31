@@ -1,0 +1,185 @@
+{
+  "products": {
+    "page_title": "إدارة المنتجات",
+    "add_button": "إضافة منتج جديد",
+    "no_data": "لا توجد منتجات",
+    "load_error": "فشل تحميل المنتجات",
+    "delete_title": "تأكيد الحذف",
+    "delete_message": "هل أنت متأكد من حذف هذا المنتج؟",
+    "delete_button": "حذف",
+    "delete_error": "فشل حذف المنتج",
+    "cancel_button": "إلغاء",
+    "search_by_title": "البحث باسم المنتج...",
+    "delete_success": "تم الحذف بنجاح",
+    "images": "الصور",
+    "title": "اسم المنتج",
+    "price": "السعر",
+    "created_at": "تاريخ الإنشاء",
+    "updated_at": "تاريخ التحديث",
+    
+    "image_alt": "صورة المنتج",
+    "image_alt_number": "صورة المنتج {{number}}",
+    "no_image": "لا توجد صورة",
+    "off": "خصم",
+    "invalid_date": "تاريخ غير صالح",
+    
+    "low_stock_products": "منتجات المخزون المنخفض",
+    "low_stock_warning": "تحذير مخزون منخفض",
+    "low_stock_description": "المنتجات التالية لديها مخزون أقل من 10 وحدات. يُنصح بتجديد المخزون.",
+    "search_low_stock": "البحث في المنتجات منخفضة المخزون...",
+    "no_low_stock_products": "لا توجد منتجات منخفضة المخزون",
+    "show_all_products": "عرض جميع المنتجات",
+    
+    "edit_product": {
+      "title": "تعديل المنتج: {{title}}",
+      "unnamed_product": "منتج بدون اسم",
+      "fetching_product": "جاري تحميل بيانات المنتج للرقم: {{id}}",
+      "product_data_received": "تم استلام بيانات المنتج:",
+      "invalid_data_structure": "تم استلام هيكل بيانات غير صالح",
+      "categories_load_warning": "فشل تحميل الفئات",
+      "fetch_error": "خطأ في جلب بيانات المنتج",
+      "product_not_found": "المنتج غير موجود",
+      "product_not_found_message": "المنتج المطلوب غير موجود أو تم حذفه.",
+      "load_failed": "فشل تحميل بيانات المنتج",
+      "missing_id": "معرّف المنتج مفقود",
+      "not_found_keyword": "غير موجود",
+      
+      "name_required": "اسم المنتج مطلوب",
+      "category_required": "الرجاء اختيار فئة",
+      "price_validation": "الرجاء إدخال سعر صالح",
+      
+      "max_images_alert": "يمكنك رفع 5 صور فقط",
+      
+      "request_data_sent": "جاري إرسال طلب التحديث بالبيانات:",
+      "image_deleted": "تم حذف الصورة بالرقم: {{imageId}}",
+      "delete_image_failed": "فشل حذف الصورة من الخادم",
+      
+      "update_success": "تم تحديث المنتج بنجاح!",
+      "update_error": "خطأ في تحديث المنتج",
+      "endpoint_not_found": "نقطة نهاية API غير موجودة",
+      "method_not_allowed": "الطريقة غير مسموح بها",
+      "data_errors": "أخطاء التحقق",
+      "update_failed": "فشل تحديث المنتج",
+      "network_error": "خطأ في الشبكة. الرجاء التحقق من اتصالك",
+      
+      "back_to_products": "العودة إلى المنتجات",
+      
+      "name_label": "اسم المنتج",
+      "name_placeholder": "أدخل اسم المنتج",
+      "price_label": "السعر",
+      "stock_label": "الكمية في المخزون",
+      "discount_label": "الخصم (%)",
+      "status_label": "الحالة",
+      "category_label": "الفئة",
+      "short_description_label": "الوصف المختصر",
+      "full_description_label": "الوصف الكامل",
+      "current_images_label": "صور المنتج الحالية",
+      "add_new_images_label": "إضافة صور جديدة",
+      
+      "status_published": "منشور",
+      "status_draft": "مسودة",
+      "status_archived": "مؤرشف",
+      
+      "select_category": "اختر فئة",
+      
+      "short_description_placeholder": "وصف مختصر (2-3 أسطر)",
+      "full_description_placeholder": "وصف مفصل للمنتج",
+      
+      "main_image_alt": "الصورة الرئيسية للمنتج",
+      "secondary_image_alt": "الصورة الثانوية للمنتج",
+      "additional_images_alt": "صور إضافية للمنتج",
+      "image_unavailable": "الصورة غير متاحة",
+      "no_images_available": "لا توجد صور لهذا المنتج",
+      
+      "choose_files": "اختر الملفات",
+      "new_image_alt": "صورة جديدة {{index}}",
+      "gallery_image_alt": "صورة المعرض {{index}}",
+      
+      "saving": "جاري الحفظ...",
+      "save_changes": "حفظ التغييرات",
+      "cancel": "إلغاء"
+    },
+    
+    "add_product": {
+      "title": "إضافة منتج جديد",
+      "categories_error": "فشل تحميل الفئات",
+      "image_type_error": "يُسمح فقط بصور JPEG و PNG و WebP",
+      "max_images_error": "الحد الأقصى 5 صور لكل منتج",
+      "required_fields": "الرجاء ملء جميع الحقول المطلوبة",
+      "success_message": "تم إضافة المنتج بنجاح!",
+      "generic_error": "فشل إضافة المنتج",
+      "connection_error": "خطأ في الاتصال بالشبكة",
+      
+      "product_info": "معلومات المنتج",
+      "category_label": "الفئة",
+      "select_category": "اختر الفئة",
+      "name_label": "اسم المنتج",
+      "name_placeholder": "أدخل اسم المنتج",
+      "short_description_label": "الوصف المختصر",
+      "short_description_placeholder": "وصف مختصر للمنتج",
+      "detailed_description_label": "الوصف التفصيلي",
+      "detailed_description_placeholder": "تفاصيل المنتج الكاملة",
+      
+      "pricing_media": "التسعير والوسائط",
+      "price_label": "السعر",
+      "discount_label": "الخصم (%)",
+      "final_price_label": "السعر النهائي",
+      "stock_label": "الكمية في المخزون",
+      "stock_placeholder": "أدخل الكمية في المخزون",
+      "images_label": "صور المنتج",
+      "upload_text": "انقر لرفع الصور",
+      "upload_hint": "JPEG, PNG, WebP بحد أقصى 5 ميجابايت للصورة (5 صور كحد أقصى)",
+      "no_images": "لم يتم اختيار أي صور بعد",
+      
+      "cancel_button": "إلغاء",
+      "save_button": "حفظ المنتج"
+    }
+  },
+  
+  "alerts": {
+    "general": {
+      "success": "تمت العملية بنجاح",
+      "error": "حدث خطأ",
+      "warning": "تحذير",
+      "info": "معلومات",
+      "confirmation": "تأكيد"
+    },
+    
+    "actions": {
+      "confirm": "تأكيد",
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "save": "حفظ",
+      "retry": "إعادة المحاولة",
+      "dismiss": "تجاهل",
+      "ok": "موافق",
+      "yes": "نعم",
+      "no": "لا"
+    },
+    
+    "messages": {
+      "operation_success": "تمت العملية بنجاح",
+      "operation_failed": "فشلت العملية",
+      "data_saved": "تم حفظ البيانات بنجاح",
+      "data_updated": "تم تحديث البيانات بنجاح",
+      "data_deleted": "تم حذف البيانات بنجاح",
+      "network_error": "خطأ في الشبكة. الرجاء التحقق من اتصالك",
+      "server_error": "خطأ في الخادم. الرجاء المحاولة مرة أخرى لاحقًا",
+      "validation_error": "الرجاء التحقق من البيانات المدخلة",
+      "unauthorized": "غير مصرح لك بتنفيذ هذا الإجراء",
+      "forbidden": "الوصول ممنوع",
+      "not_found": "العنصر غير موجود",
+      "timeout": "انتهت مهلة الطلب. الرجاء المحاولة مرة أخرى",
+      "invalid_data": "تنسيق البيانات غير صالح",
+      "required_fields": "الرجاء ملء جميع الحقول المطلوبة"
+    },
+    
+    "confirmations": {
+      "delete_item": "هل أنت متأكد من حذف هذا العنصر؟",
+      "delete_multiple": "هل أنت متأكد من حذف العناصر المحددة؟",
+      "unsaved_changes": "لديك تغييرات غير محفوظة. هل أنت متأكد من المغادرة؟",
+      "logout": "هل أنت متأكد من تسجيل الخروج؟",
+      "cancel_operation": "هل أنت متأكد من إلغاء هذه العملية؟"
+    }
+  }
+}

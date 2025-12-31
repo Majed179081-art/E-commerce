@@ -1,0 +1,114 @@
+{
+  "app_name": "التجارة الإلكترونية",
+  "welcome": "مرحباً بكم في منصة التجارة الإلكترونية!",
+  "hero_subtitle": "اكتشف منتجات رائعة بأسعار مناسبة",
+  "login_register": "تسجيل الدخول / إنشاء حساب",
+  "go_dashboard": "الذهاب للوحة التحكم",
+  "my_account": "حسابي",
+  "logged_in_message": "مرحباً بعودتك! يمكنك الوصول إلى {{dashboard}} من هنا.",
+  "view_products": "عرض المنتجات",
+  "scroll_to_products": "الانتقال للمنتجات",
+  "featured_products": "منتجات مميزة",
+  "best_sellers": "الأكثر مبيعاً",
+  "new_arrivals": "وصل حديثاً",
+  "latest_sales": "أحدث العروض",
+  "top_rated": "أعلى التقييمات",
+  "latest_products": "أحدث المنتجات",
+  "language": "اللغة",
+  "theme": "المظهر",
+  "contact_us": "اتصل بنا",
+  
+  "na": "غير متوفر",
+  "error": "خطأ",
+  "success": "نجاح",
+  "saving": "جاري الحفظ...",
+  "save_changes": "حفظ التغييرات",
+  "product": "منتج",
+  "back_to_orders": "العودة للطلبات",
+  "loading": "جاري التحميل...",
+  "back": "رجوع",
+  "cancel": "إلغاء",
+  "save": "حفظ",
+  
+  "buttons": {
+    "back": "رجوع",
+    "backHome": "العودة للرئيسية",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "view": "عرض",
+    "add": "إضافة",
+    "loading": "جاري التحميل...",
+    "tryAgain": "حاول مرة أخرى",
+    "proceed": "متابعة",
+    "checking": "جاري التحقق...",
+    "adding": "جاري الإضافة..."
+  },
+  
+  "alerts": {
+    "titles": {
+      "success": "نجاح",
+      "error": "خطأ",
+      "warning": "تحذير",
+      "info": "معلومات",
+      "confirm": "تأكيد الإجراء",
+      "delete": "تأكيد الحذف"
+    },
+    "buttons": {
+      "ok": "موافق",
+      "confirm": "تأكيد",
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "yes": "نعم",
+      "no": "لا",
+      "save": "حفظ",
+      "discard": "تجاهل",
+      "retry": "إعادة المحاولة",
+      "close": "إغلاق"
+    },
+    "messages": {
+      "delete_warning": "لا يمكن التراجع عن هذا الإجراء",
+      "delete_confirmation": "هل أنت متأكد من حذف هذا العنصر؟",
+      "update_confirmation": "هل تريد حفظ التغييرات؟",
+      "connection_error": "تعذر الاتصال بالخادم",
+      "server_error": "حدث خطأ في الخادم",
+      "validation_error": "يرجى التحقق من البيانات المدخلة",
+      "not_found": "العنصر المطلوب غير موجود",
+      "unauthorized": "غير مصرح لك بتنفيذ هذا الإجراء",
+      "forbidden": "تم رفض الوصول إلى هذا المورد"
+    },
+    "states": {
+      "loading": "جاري التحميل...",
+      "saving": "جاري الحفظ...",
+      "processing": "جاري المعالجة...",
+      "please_wait": "يرجى الانتظار..."
+    }
+  },
+  
+  "status": {
+    "pending": "قيد الانتظار",
+    "completed": "مكتمل",
+    "processing": "قيد المعالجة",
+    "shipped": "تم الشحن",
+    "delivered": "تم التوصيل",
+    "cancelled": "ملغي"
+  },
+  
+  "errors": {
+    "general": "حدث خطأ ما",
+    "network": "خطأ في الشبكة",
+    "required": "هذا الحقل مطلوب",
+    "invalid_email": "بريد إلكتروني غير صالح",
+    "loadProduct": "فشل تحميل تفاصيل المنتج",
+    "exceedStock": "الكمية تتجاوز المخزون المتاح",
+    "validation": "يرجى التحقق من الكمية",
+    "addCart": "فشل الإضافة إلى السلة"
+  },
+  
+  "meta": {
+    "freeShipping": "شحن مجاني",
+    "returnPolicy": "سياسة إرجاع 30 يوماً",
+    "secureCheckout": "دفع آمن"
+  }
+}

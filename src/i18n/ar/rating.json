@@ -1,0 +1,33 @@
+{
+  "rating": {
+    "title": "التقييمات والتعليقات",
+    "distribution": "توزيع التقييمات",
+    "yourRating": "تقييمك",
+    "addYourRating": "أضف تقييمك",
+    "yourStars": "نجومك",
+    "stars": "نجوم",
+    "yourComment": "تعليقك",
+    "commentPlaceholder": "شاركنا تجربتك مع هذا المنتج...",
+    "addRating": "إضافة تقييم",
+    "updateRating": "تحديث التقييم",
+    "deleteRating": "حذف التقييم",
+    "submitRating": "إرسال التقييم",
+    "submitting": "جاري الإرسال...",
+    "allRatings": "جميع التقييمات",
+    "allReviews": "جميع التعليقات",
+    "noRatings": "لا توجد تقييمات بعد. كن أول من يقيم!",
+    "noReviews": "لا توجد تعليقات بعد.",
+    "basedOn": "بناءً على {count} تقييمات",
+    "reviews": "تعليقات",
+    "anonymous": "مجهول",
+    "approved": "مقبول",
+    "pending": "قيد المراجعة",
+    "selectStars": "الرجاء اختيار عدد النجوم",
+    "deleteConfirm": "هل أنت متأكد من حذف تقييمك؟",
+    "deleted": "تم حذف تقييمك بنجاح",
+    "added": "تم إضافة تقييمك بنجاح",
+    "updated": "تم تحديث تقييمك بنجاح",
+    "error": "حدث خطأ أثناء إرسال تقييمك",
+    "deleteError": "حدث خطأ أثناء حذف تقييمك"
+  }
+}

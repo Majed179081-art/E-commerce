@@ -1,0 +1,273 @@
+/* Pages/Dashboard/Website/CategoryProductsPage.module.css */
+
+.page {
+  padding: 200px 20px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== Light Theme ===== */
+body[data-theme='light'] .page {
+  background: linear-gradient(-45deg, #f8fafc, #e2e8f0, #f1f5f9, #e2e8f0);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #1e293b;
+}
+
+/* ===== Dark Theme ===== */
+body[data-theme='dark'] .page {
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #0f172a, #1e293b);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #f1f5f9;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Light Theme Header */
+body[data-theme='light'] .header {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  color: #1e293b;
+}
+
+/* Dark Theme Header */
+body[data-theme='dark'] .header {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  color: #f8fafc;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.header p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: inherit;
+}
+
+/* Category Image */
+.categoryImage {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 20px auto;
+  border: 3px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoryImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Products Grid */
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.3rem;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 500px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body[data-theme='light'] .loading {
+  color: #64748b;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme='dark'] .loading {
+  color: #cbd5e1;
+  background: #1e293b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.loading::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #e2e8f0;
+  border-top: 3px solid #6366f1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+/* Error State */
+.error {
+  text-align: center;
+  padding: 40px;
+  font-weight: 600;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 500px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body[data-theme='light'] .error {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+body[data-theme='dark'] .error {
+  color: #fecaca;
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid #7f1d1d;
+}
+
+.error::before {
+  content: '⚠️ ';
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/* No Products State */
+.noProducts {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 60px 20px;
+  border-radius: 12px;
+  grid-column: 1 / -1;
+  margin: 20px 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body[data-theme='light'] .noProducts {
+  color: #64748b;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme='dark'] .noProducts {
+  color: #cbd5e1;
+  background: #1e293b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.noProducts::before {
+  content: '📦';
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hover & motion */
+.productsGrid > * {
+  animation: fadeIn 0.6s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productsGrid > *:hover {
+  transform: translateY(-4px);
+}
+
+/* RTL Support */
+body.arabic .header { text-align: right; }
+body.arabic .header p { direction: rtl; }
+body.arabic .noProducts,
+body.arabic .error,
+body.arabic .loading { text-align: right; }
+
+/* Scrollbar */
+.page::-webkit-scrollbar { width: 8px; }
+.page::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+.page::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+.page::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Accessibility & Reduced Motion */
+.header h1:focus,
+.categoryImage:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .categoryImage,
+  .productsGrid > *,
+  .page {
+    animation: none;
+    transition: none;
+  }
+  
+  .loading::after {
+    animation: none;
+    content: '...';
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .productsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .header h1 { font-size: 2.2rem; }
+}
+
+@media (max-width: 768px) {
+  .page { padding: 180px 15px; }
+  .header { padding: 25px 15px; margin-bottom: 30px; }
+  .header h1 { font-size: 2rem; }
+  .categoryImage { width: 100px; height: 100px; }
+}
+
+@media (max-width: 480px) {
+  .header { padding: 100px 12px; }
+  .header h1 { font-size: 1.8rem; }
+  .header p { font-size: 1rem; }
+  .productsGrid { grid-template-columns: 1fr; }
+  .loading, .error, .noProducts {
+    padding: 30px 15px;
+    margin: 20px auto;
+  }
+}

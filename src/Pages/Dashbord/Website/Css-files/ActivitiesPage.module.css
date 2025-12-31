@@ -1,0 +1,747 @@
+/* Main Container */
+.activitiesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Header */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.headerLeft h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.backBtn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.backBtn:hover {
+  background-color: #2563eb;
+  text-decoration: none;
+}
+
+/* Stats Summary */
+.statsSummary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.statItem {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.statIcon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 12px;
+}
+
+.statContent h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.statContent p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Controls */
+.controlsSection {
+  margin-bottom: 30px;
+}
+
+.searchBox {
+  display: flex;
+  margin-bottom: 20px;
+  max-width: 400px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.searchButton {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.2s;
+}
+
+.searchButton:hover {
+  background: #2563eb;
+}
+
+.filterControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filterButtons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 8px 16px;
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.filterBtn:hover {
+  background: #e5e7eb;
+}
+
+.filterBtn.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.refreshBtn, .clearBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.refreshBtn {
+  background: #10b981;
+  color: white;
+}
+
+.refreshBtn:hover {
+  background: #059669;
+}
+
+.clearBtn {
+  background: #ef4444;
+  color: white;
+}
+
+.clearBtn:hover {
+  background: #dc2626;
+}
+
+/* Error Container */
+.errorContainer {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid #dc2626;
+}
+
+.retryButton {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.retryButton:hover {
+  background: #2563eb;
+}
+
+/* Activities List */
+.activitiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Activity Card */
+.activityCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s;
+}
+
+.activityCard:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.activityHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.activityIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.activityInfo {
+  flex: 1;
+}
+
+.activityTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 5px;
+}
+
+.activityMeta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.activityTime {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.activityRelativeTime {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+/* Activity Body */
+.activityBody {
+  padding: 20px;
+}
+
+.activityDescription {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.activityEntity {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.entityType, .entityId {
+  padding: 2px 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Activity Footer */
+.activityFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userIcon {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-weight: 500;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.userRole {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+.activityActions {
+  display: flex;
+  gap: 10px;
+}
+
+.viewDetailsBtn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.viewDetailsBtn:hover {
+  background: #2563eb;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.pageButton {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.pageButton:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+.pageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageNumbers {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.pageNumber {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.pageNumber:hover {
+  background: #f3f4f6;
+}
+
+.pageNumber.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.pageDots {
+  color: #6b7280;
+  padding: 0 5px;
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.emptyStateIcon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #9ca3af;
+}
+
+.emptyState h3 {
+  color: #1f2937;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.emptyState p {
+  color: #6b7280;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+/* Loading State */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingContainer p {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .activitiesContainer {
+    padding: 15px;
+  }
+  
+  .pageHeader {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .headerLeft h1 {
+    font-size: 1.5rem;
+  }
+  
+  .filterControls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filterButtons, .actionButtons {
+    width: 100%;
+  }
+  
+  .activityFooter {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .activityActions {
+    justify-content: center;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .pageNumbers {
+    order: 2;
+  }
+  
+  .pageButton:first-child {
+    order: 1;
+  }
+  
+  .pageButton:last-child {
+    order: 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsSummary {
+    grid-template-columns: 1fr;
+  }
+  
+  .activityEntity {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .pageNumbers {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .activitiesContainer {
+  background: #121212;
+  color: #e4e4e4;
+}
+
+[data-theme="dark"] .statItem,
+[data-theme="dark"] .activityCard,
+[data-theme="dark"] .emptyState {
+  background: #1e1e1e;
+  border-color: #444;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .headerLeft h1 {
+  color: #e4e4e4;
+}
+
+[data-theme="dark"] .subtitle,
+[data-theme="dark"] .statContent p,
+[data-theme="dark"] .activityTime,
+[data-theme="dark"] .activityRelativeTime,
+[data-theme="dark"] .userRole {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .statContent h3,
+[data-theme="dark"] .activityTitle,
+[data-theme="dark"] .userName,
+[data-theme="dark"] .emptyState h3 {
+  color: #e4e4e4;
+}
+
+[data-theme="dark"] .pageHeader {
+  border-bottom-color: #444;
+}
+
+[data-theme="dark"] .activityHeader,
+[data-theme="dark"] .activityFooter {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+[data-theme="dark"] .activityDescription {
+  color: #ddd;
+}
+
+[data-theme="dark"] .activityEntity {
+  background: #2a2a2a;
+}
+
+[data-theme="dark"] .entityType,
+[data-theme="dark"] .entityId {
+  background: #1e1e1e;
+  border-color: #444;
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .searchInput {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #eee;
+}
+
+[data-theme="dark"] .searchInput:focus {
+  border-color: #818cf8;
+}
+
+[data-theme="dark"] .filterBtn {
+  background: #333;
+  color: #ddd;
+  border-color: #444;
+}
+
+[data-theme="dark"] .filterBtn:hover {
+  background: #444;
+}
+
+[data-theme="dark"] .filterBtn.active {
+  background: #818cf8;
+  color: white;
+  border-color: #818cf8;
+}
+
+[data-theme="dark"] .pageNumber {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #ddd;
+}
+
+[data-theme="dark"] .pageNumber:hover {
+  background: #333;
+}
+
+[data-theme="dark"] .pageNumber.active {
+  background: #818cf8;
+  color: white;
+  border-color: #818cf8;
+}
+
+[data-theme="dark"] .pageButton {
+  background: #333;
+  color: #ddd;
+  border-color: #444;
+}
+
+[data-theme="dark"] .pageButton:hover:not(:disabled) {
+  background: #444;
+}
+
+[data-theme="dark"] .errorContainer {
+  background: rgba(185, 28, 28, 0.15);
+  color: #f87171;
+  border-left-color: #ef4444;
+}
+/* أضف هذه الأنماط في ملف ActivitiesPage.module.css */
+
+/* زر حذف النشاط الفردي */
+.deleteActivityBtn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.deleteActivityBtn:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* زر حذف أنشطة اليوم */
+.clearTodayBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  background: #f59e0b;
+  color: white;
+}
+
+.clearTodayBtn:hover {
+  background: #d97706;
+}
+
+/* تحديث زر الحذف النهائي */
+.clearBtn {
+  background: #ef4444;
+  color: white;
+}
+
+.clearBtn:hover {
+  background: #dc2626;
+}

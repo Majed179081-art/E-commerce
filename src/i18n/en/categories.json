@@ -1,0 +1,45 @@
+{
+  "loading_products": "Loading products...",
+  "failed_to_load_products": "Failed to load products. Please try again.",
+  "category_products": "Category Products",
+  "explore_category_products": "Explore {{count}} products in this category",
+  "no_products_in_category": "No products available in this category",
+  "all_categories": "All Categories",
+  "browse_products": "Browse Products",
+  
+  "category": {
+    "title": "Category",
+    "description": "Description",
+    "image": "Category Image",
+    "view_all": "View All",
+    "back_to_categories": "Back to Categories"
+  },
+  
+  "filters": {
+    "sort_by": "Sort by",
+    "price_range": "Price Range",
+    "in_stock": "In Stock Only",
+    "on_sale": "On Sale",
+    "apply": "Apply Filters",
+    "clear": "Clear Filters"
+  },
+  
+  "messages": {
+    "loading": "Loading category information...",
+    "error": "Unable to load category. The category may not exist.",
+    "empty": "This category is currently empty.",
+    "suggestions": "Try browsing other categories or check back later."
+  },
+  
+  "navigation": {
+    "home": "Home",
+    "categories": "Categories",
+    "current_category": "Current Category"
+  },
+  
+  "accessibility": {
+    "category_image": "Image for {{category}}",
+    "product_grid": "Products grid for {{category}} category",
+    "filter_button": "Open filter options"
+  }
+}

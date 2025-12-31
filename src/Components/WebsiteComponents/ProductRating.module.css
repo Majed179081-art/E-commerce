@@ -1,0 +1,475 @@
+/* src/Components/WebsiteComponents/ProductRating/ProductRating.module.css */
+.ratingSection {
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.ratingHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border-color, #f0f0f0);
+}
+
+.ratingHeader h2 {
+  font-size: 1.8rem;
+  color: var(--text-primary, #333);
+  margin: 0;
+}
+
+.ratingStats {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.averageRating {
+  text-align: center;
+}
+
+.ratingNumber {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color, #007bff);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.starsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.ratingCount {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666);
+  display: block;
+}
+
+.reviewsCount {
+  text-align: center;
+  padding: 15px 25px;
+  background: var(--bg-secondary, #f8f9fa);
+  border-radius: 10px;
+  border: 1px solid var(--border-color, #e9ecef);
+}
+
+.countNumber {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-primary, #333);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.reviewsCount span:last-child {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666);
+}
+
+/* توزيع النجوم */
+.starDistribution {
+  margin-bottom: 30px;
+}
+
+.starDistribution h3 {
+  font-size: 1.2rem;
+  color: var(--text-primary, #333);
+  margin-bottom: 15px;
+}
+
+.distributionBars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.distributionRow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.starLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 40px;
+  font-weight: 600;
+  color: var(--text-primary, #333);
+}
+
+.barContainer {
+  flex: 1;
+  height: 10px;
+  background: var(--bg-secondary, #f0f0f0);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ffc107, #ff9800);
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+
+.percentage {
+  min-width: 40px;
+  text-align: right;
+  font-weight: 600;
+  color: var(--text-primary, #333);
+}
+
+.count {
+  min-width: 40px;
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666);
+}
+
+/* نموذج التقييم */
+.ratingFormSection {
+  background: var(--bg-secondary, #f8f9fa);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  border: 1px solid var(--border-color, #e9ecef);
+}
+
+.ratingFormSection h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary, #333);
+  margin-bottom: 20px;
+}
+
+.ratingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.starInput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.starInput label {
+  font-weight: 600;
+  color: var(--text-primary, #333);
+}
+
+.starSelection {
+  display: flex;
+  gap: 10px;
+}
+
+.starButton {
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.starButton:hover:not(:disabled) {
+  transform: scale(1.2);
+}
+
+.starButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.selectedStar {
+  color: #ffc107;
+}
+
+.unselectedStar {
+  color: #e4e5e9;
+}
+
+.selectedRating {
+  font-size: 0.95rem;
+  color: var(--text-secondary, #666);
+}
+
+.commentInput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.commentInput label {
+  font-weight: 600;
+  color: var(--text-primary, #333);
+}
+
+.textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--border-color, #ddd);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--input-bg, #fff);
+  color: var(--text-primary, #333);
+  resize: vertical;
+  min-height: 100px;
+  transition: border-color 0.2s;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--primary-color, #007bff);
+}
+
+.textarea:disabled {
+  background: var(--bg-disabled, #f5f5f5);
+  cursor: not-allowed;
+}
+
+.charCounter {
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--text-secondary, #999);
+}
+
+.formActions {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.submitButton, .deleteButton {
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+}
+
+.submitButton {
+  background: var(--primary-color, #007bff);
+  color: white;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: var(--primary-dark, #0056b3);
+  transform: translateY(-2px);
+}
+
+.deleteButton {
+  background: var(--danger-color, #dc3545);
+  color: white;
+}
+
+.deleteButton:hover:not(:disabled) {
+  background: var(--danger-dark, #c82333);
+  transform: translateY(-2px);
+}
+
+.submitButton:disabled, .deleteButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* التباديل */
+.tabs {
+  display: flex;
+  gap: 1px;
+  background: var(--border-color, #e9ecef);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.tab {
+  flex: 1;
+  padding: 15px;
+  background: var(--bg-secondary, #f8f9fa);
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary, #666);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.tab:hover:not(.activeTab) {
+  background: var(--bg-hover, #e9ecef);
+  color: var(--text-primary, #333);
+}
+
+.activeTab {
+  background: var(--primary-color, #007bff);
+  color: white;
+}
+
+/* قوائم التقييمات والتعليقات */
+.ratingsList, .reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loading, .noData {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary, #666);
+  font-size: 1.1rem;
+}
+
+.ratingItem, .reviewItem {
+  background: var(--card-bg, #fff);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid var(--border-color, #e9ecef);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ratingItem:hover, .reviewItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ratingHeader, .reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.userAvatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.userName {
+  font-weight: 600;
+  color: var(--text-primary, #333);
+  margin-bottom: 3px;
+}
+
+.ratingDate, .reviewDate {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #999);
+}
+
+.ratingStars {
+  display: flex;
+  gap: 3px;
+}
+
+.ratingComment, .reviewComment {
+  color: var(--text-primary, #333);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: var(--bg-secondary, #f8f9fa);
+  border-radius: 8px;
+  border-left: 4px solid var(--border-color, #e9ecef);
+}
+
+.reviewStatus {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.approved, .pending {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.approved {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.pending {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ratingSection {
+    padding: 20px;
+  }
+  
+  .ratingHeader {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+  
+  .ratingStats {
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .ratingNumber {
+    font-size: 2.5rem;
+  }
+  
+  .countNumber {
+    font-size: 1.8rem;
+  }
+  
+  .distributionRow {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .starLabel, .percentage, .count {
+    min-width: auto;
+  }
+  
+  .barContainer {
+    order: 3;
+    flex: 0 0 100%;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+  
+  .submitButton, .deleteButton {
+    width: 100%;
+  }
+}

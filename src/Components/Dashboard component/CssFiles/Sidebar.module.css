@@ -1,0 +1,209 @@
+/* ===== Sidebar Styles ===== */
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background: #2c3e50;
+  color: #ecf0f1;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  z-index: 900;
+}
+
+.sidebarClosed {
+  composes: sidebar;
+  transform: translateX(-100%);
+  width: 0;
+}
+
+.sidebarOpen {
+  composes: sidebar;
+  transform: translateX(0);
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 15px 0;
+}
+
+.sidebarItem {
+  margin: 5px 0;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #bdc3c7;
+  font-size: 0.95rem;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ecf0f1;
+}
+
+.navLinkActive {
+  composes: navLink;
+  background: rgba(52, 152, 219, 0.2);
+  color: #ecf0f1;
+  border-left: 4px solid #3498db;
+}
+
+.icon {
+  margin-right: 12px;
+  font-size: 1.1rem;
+  min-width: 24px;
+}
+
+/* Scrollbar styling */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+}
+
+/* ===================================================== */
+/* 🌙 دعم الوضع الداكن والفاتح */
+body[data-theme='dark'] .sidebar {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+body[data-theme='dark'] .navLink {
+  color: #94a3b8;
+}
+
+body[data-theme='dark'] .navLink:hover {
+  background: rgba(148, 163, 184, 0.1);
+  color: #f1f5f9;
+}
+
+body[data-theme='dark'] .navLinkActive {
+  background: rgba(99, 102, 241, 0.15);
+  border-left: 4px solid #6366f1;
+  color: #f1f5f9;
+}
+
+/* Scrollbar (Dark Mode) */
+body[data-theme='dark'] .sidebar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+}
+body[data-theme='dark'] .sidebar:hover::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* ☀️ وضع النهار */
+body[data-theme='light'] .sidebar {
+  background: #ffffff;
+  color: #2c3e50;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.08);
+}
+
+body[data-theme='light'] .navLink {
+  color: #4b5563;
+}
+
+body[data-theme='light'] .navLink:hover {
+  background: rgba(99, 102, 241, 0.08);
+  color: #111827;
+}
+
+body[data-theme='light'] .navLinkActive {
+  background: rgba(99, 102, 241, 0.15);
+  border-left: 4px solid #6366f1;
+  color: #111827;
+}
+
+body[data-theme='light'] .sidebar::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.2);
+}
+body[data-theme='light'] .sidebar:hover::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.4);
+}
+
+/* Transition ناعم */
+body[data-theme='dark'] *,
+body[data-theme='light'] * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+/* ================= Arabic Sidebar Flip ================= */
+
+/* السايدبار في الوضع العربي يظل مخفي من اليمين */
+body.arabic .sidebar {
+  left: auto !important;
+  right: -250px !important;
+}
+
+/* عند فتح السايدبار باللغة العربية يظهر من اليسار */
+body.arabic .sidebarOpen {
+  transform: translateX(0) !important;
+  left: 0 !important;
+  right: auto !important;
+}
+
+/* عند إغلاقه يختفي لليمين (العكس تماماً عن الإنجليزي) */
+body.arabic .sidebarClosed {
+  transform: translateX(100%) !important;
+  right: -250px !important;
+  left: auto !important;
+}
+
+/* المحتوى يتحرك لليمين عند العربية لأن السايدبار أصبح يسار */
+body.arabic .mainContentWithSidebar {
+  margin-left: 250px !important;
+  margin-right: 0 !important;
+}
+/* RTL Mode */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.rtl .icon {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+/* LTR Mode */
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+.ltr .icon {
+  margin-right: 10px;
+  margin-left: 0;
+}
+/* Sidebar RTL position */
+.rtl {
+  left: auto !important;
+  right: 0 !important;
+}

@@ -1,0 +1,134 @@
+.formPage {
+  padding: 20px;
+  background: var(--page-bg);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.formTitle {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  color: var(--text-main);
+}
+
+.errorMsg {
+  background: var(--error-bg);
+  color: var(--error-text);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.customForm {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--form-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.formGroup label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text-main);
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  border-color: var(--focus-border);
+  box-shadow: 0 0 4px var(--focus-shadow);
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, var(--btn-gradient-1), var(--btn-gradient-2));
+  color: var(--btn-text);
+  padding: 14px 20px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.submitBtn:hover {
+  background: linear-gradient(135deg, var(--btn-gradient-2), var(--btn-gradient-1));
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .formTitle {
+    font-size: 20px;
+  }
+
+  .customForm {
+    padding: 20px;
+  }
+}
+
+/* ===== Theme Variables ===== */
+
+/* ☀️ Light Theme */
+:root,
+body[data-theme='light'] {
+  --page-bg: #f8f9fa;
+  --form-bg: #ffffff;
+  --text-main: #333333;
+  --input-bg: #ffffff;
+  --input-border: #cccccc;
+  --focus-border: #7e9ee6;
+  --focus-shadow: rgba(126, 158, 230, 0.4);
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --error-bg: #f8d7da;
+  --error-text: #721c24;
+  --btn-gradient-1: #7e9ee6;
+  --btn-gradient-2: #a777e3;
+  --btn-text: #ffffff;
+}
+
+/* 🌙 Dark Theme */
+body[data-theme='dark'] {
+  --page-bg: #121212;
+  --form-bg: #1a1a1a;
+  --text-main: #f5f5f5;
+  --input-bg: #222;
+  --input-border: #444;
+  --focus-border: #a777e3;
+  --focus-shadow: rgba(167, 119, 227, 0.4);
+  --shadow-color: rgba(0, 0, 0, 0.6);
+  --error-bg: #3b181b;
+  --error-text: #ffbaba;
+  --btn-gradient-1: #a777e3;
+  --btn-gradient-2: #7e9ee6;
+  --btn-text: #ffffff;
+}

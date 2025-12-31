@@ -1,0 +1,320 @@
+/* src/Components/WebsiteComponents/Profile.module.css */
+.profilePage {
+  min-height: 100vh;
+  background-color: var(--bg-primary, #f8f9fa);
+}
+
+.profileContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 40px;
+}
+
+.profileHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profileHeader h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary, #2c3e50);
+  margin-bottom: 10px;
+}
+
+.profileHeader p {
+  font-size: 1.1rem;
+  color: var(--text-secondary, #7f8c8d);
+}
+
+.profileContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.profileCard {
+  background: var(--card-bg, #ffffff);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.userInfo {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.avatarSection {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.avatarSection h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary, #2c3e50);
+  margin-bottom: 8px;
+}
+
+.roleBadge {
+  background: var(--accent, #007bff);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.detailsSection {
+  flex: 1;
+}
+
+.infoGroup {
+  margin-bottom: 30px;
+}
+
+.infoGroup h3 {
+  font-size: 1.2rem;
+  color: var(--text-primary, #2c3e50);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--border, #e9ecef);
+  padding-bottom: 8px;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: between;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-light, #f1f3f4);
+}
+
+.infoItem label {
+  font-weight: 600;
+  color: var(--text-primary, #2c3e50);
+  min-width: 120px;
+}
+
+.infoItem span {
+  color: var(--text-secondary, #7f8c8d);
+  flex: 1;
+}
+
+.actionsGroup h3 {
+  font-size: 1.2rem;
+  color: var(--text-primary, #2c3e50);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--border, #e9ecef);
+  padding-bottom: 8px;
+}
+
+.actionBtn {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  background: var(--card-bg, #ffffff);
+  border: 2px solid var(--accent, #007bff);
+  color: var(--accent, #007bff);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.actionBtn:hover {
+  background: var(--accent, #007bff);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.statsCard {
+  background: var(--card-bg, #ffffff);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+.statsCard h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary, #2c3e50);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.statsGrid {
+  display: grid;
+  gap: 15px;
+}
+
+.statItem {
+  text-align: center;
+  padding: 20px;
+  background: var(--bg-secondary, #f8f9fa);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-3px);
+}
+
+.statNumber {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent, #007bff);
+  margin-bottom: 5px;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #7f8c8d);
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profileContainer {
+    padding: 80px 15px 30px;
+  }
+
+  .profileContent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .userInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .infoItem {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .infoItem label {
+    min-width: auto;
+    margin-bottom: 5px;
+  }
+}
+/* إضافة هذه الأنماط */
+.statsLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+.statItem {
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.statNumber {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.statAmount {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--success-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: var(--text-secondary);
+  display: block;
+}
+
+.additionalStats {
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.additionalStats h4 {
+  margin-bottom: 15px;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.insightItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.insightItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.insightIcon {
+  font-size: 20px;
+  background: var(--primary-light);
+  color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insightTitle {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 3px;
+}
+
+.insightValue {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-primary);
+}
