@@ -19,7 +19,10 @@
     "fetch_categories_error": "Failed to fetch categories:",
     "fetch_latest_products_error": "Failed to fetch latest products:",
     "fetch_activities_error": "Failed to fetch activities:",
-    "unexpected_error": "Unexpected error fetching dashboard data:"
+    "unexpected_error": "Unexpected error fetching dashboard data:",
+    "data_updated": "Data updated successfully ",
+"operation_failed": "Operation failed",
+"network_error": "Network error, check your connection"
   },
   
   "sidebar": {

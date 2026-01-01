@@ -1,22 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Axios } from "../../../API/axios";
-import { PRODUCT } from "../../../API/API";
 import { FiArrowLeft, FiUpload, FiCheck } from "react-icons/fi";
 import LoadingSubmit from "../../../Components/Loading/Loading";
 import { useTranslation } from "react-i18next";
 import "./Css-files/UpdateProduct.css";
 import { useAlert } from "../../../Context/AlertContext";
-import { useAdminData } from "../../../Context/AdminDataContext"; // ⬅️ أضيف هذا الاستيراد
+import { useAdminData } from "../../../Context/AdminDataContext";
 
 export default function EditProduct() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { t } = useTranslation();
   
-  // 👈 استخدام الألرت المركزي للرسائل فقط
   const { showError, showSuccess } = useAlert();
-  const { clearCache } = useAdminData(); // ⬅️ أضيف هذا
+  const { clearCache } = useAdminData();
 
   const [product, setProduct] = useState({
     title: "",
@@ -44,15 +42,10 @@ export default function EditProduct() {
         setLoading(true);
         setError("");
 
-        console.log(t('edit_product.fetching_product', { id }));
-
-        // جلب بيانات المنتج
         const productResponse = await Axios.get(`/product/${id}`);
-        console.log(t('edit_product.product_data_received'), productResponse.data);
 
         let productData = productResponse.data;
 
-        // معالجة البيانات بشكل آمن
         if (productData && typeof productData === 'object') {
           setProduct({
             title: productData.title || "",
@@ -82,18 +75,14 @@ export default function EditProduct() {
           throw new Error(t('edit_product.invalid_data_structure'));
         }
 
-        // جلب الفئات
         try {
           const categoriesResponse = await Axios.get("/categories");
           setCategories(categoriesResponse.data?.data || categoriesResponse.data || []);
-        } catch (categoriesError) {
-          console.warn(t('edit_product.categories_load_warning'), categoriesError);
+        } catch {
           setCategories([]);
         }
 
       } catch (err) {
-        console.error(t('edit_product.fetch_error'), err);
-        
         if (err.response?.status === 401) {
           navigate("/login");
         } else if (err.response?.status === 404) {
@@ -159,7 +148,6 @@ export default function EditProduct() {
 const handleSubmit = async (e) => {
   e.preventDefault();
   
-  // التحقق من صحة البيانات قبل الإرسال
   if (!product.title.trim()) {
     const errorMsg = t('edit_product.name_required');
     setError(errorMsg);
@@ -185,17 +173,12 @@ const handleSubmit = async (e) => {
   setError("");
 
   try {
-    // حذف الصور المحذوفة
     for (const imageId of deletedImageIds) {
       try {
         await Axios.delete(`/product-images/${imageId}`);
-        console.log(t('edit_product.image_deleted', { imageId }));
-      } catch (deleteError) {
-        console.warn(t('edit_product.delete_image_failed'), deleteError);
-      }
+      } catch {}
     }
 
-    // ✅ **التصحيح 1: استخدام المسار الصحيح**
     const requestData = {
       category: product.category || "",
       title: product.title.trim(),
@@ -206,9 +189,6 @@ const handleSubmit = async (e) => {
       stock: parseInt(product.stock) || 0
     };
 
-    console.log(t('edit_product.request_data_sent'), requestData);
-
-    // ✅ **التصحيح 2: استخدم `/products/{id}` بدلاً من `/product/{id}`
     await Axios.put(`/products/${id}`, requestData, {
       headers: { 
         "Content-Type": "application/json",
@@ -216,63 +196,49 @@ const handleSubmit = async (e) => {
       },
     });
 
-    // ✅ **التصحيح 3: رفع الصور الجديدة**
     if (selectedImages.length > 0) {
       const imageFormData = new FormData();
       
-      // إضافة ID المنتج
       imageFormData.append("product_id", id);
       
-      // إضافة كل الصور
       selectedImages.forEach((image, index) => {
         imageFormData.append(`images[${index}]`, image);
       });
 
-      // ✅ **التصحيح 4: استخدم المسار الصحيح لرفع الصور**
       await Axios.post("/product-images", imageFormData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
     }
 
-    // ⬇️ أضيف هذا السطر ⬇️
-    clearCache('products'); // تحديث الكاش للمنتجات
+    clearCache('products');
     
-    // ✅ **التصحيح 5: عرض رسالة نجاح باستخدام الألرت المركزي**
-    showSuccess(t('alerts.general.success'));
+    showSuccess(t('dashboard.data_updated'));
     
-    // الانتقال بعد 1.5 ثانية
     setTimeout(() => {
       navigate("/dashboard/products");
     }, 1500);
     
   } catch (err) {
-    console.error(t('edit_product.update_error'), err);
-    
-    // ✅ **التصحيح 6: عرض رسالة خطأ واضحة باستخدام الألرت المركزي**
     if (err.response) {
-      console.log('Status:', err.response.status);
-      console.log('Data:', err.response.data);
-      console.log('Headers:', err.response.headers);
-      
       let errorMsg = '';
       if (err.response.status === 404) {
-        errorMsg = t('edit_product.endpoint_not_found');
+        errorMsg = t('dashboard.edit_product.endpoint_not_found');
       } else if (err.response.status === 405) {
-        errorMsg = `${t('edit_product.method_not_allowed')}: ${err.config.method} ${err.config.url}`;
+        errorMsg = t('dashboard.edit_product.method_not_allowed');
       } else if (err.response.data?.errors) {
         const errorMessages = Object.values(err.response.data.errors).flat().join(', ');
-        errorMsg = `${t('edit_product.data_errors')}: ${errorMessages}`;
+        errorMsg = `${t('dashboard.edit_product.data_errors')}: ${errorMessages}`;
       } else {
-        errorMsg = err.response.data?.message || t('edit_product.update_failed');
+        errorMsg = err.response.data?.message || t('dashboard.operation_failed');
       }
       setError(errorMsg);
       showError(errorMsg);
     } else if (err.request) {
-      const errorMsg = t('edit_product.network_error');
+      const errorMsg = t('dashboard.network_error');
       setError(errorMsg);
       showError(errorMsg);
     } else {
-      const errorMsg = err.message || t('edit_product.update_failed');
+      const errorMsg = err.message || t('dashboard.operation_failed');
       setError(errorMsg);
       showError(errorMsg);
     }
@@ -289,17 +255,17 @@ const handleSubmit = async (e) => {
     );
   }
 
-  if (error && error.includes(t('edit_product.not_found_keyword'))) {
+  if (error && error.includes(t('dashboard.edit_product.not_found_keyword'))) {
     return (
       <div className="modern-page-container">
         <div className="error-container">
-          <h2>{t('edit_product.product_not_found')}</h2>
-          <p>{t('edit_product.product_not_found_message')}</p>
+          <h2>{t('dashboard.edit_product.product_not_found')}</h2>
+          <p>{t('dashboard.edit_product.product_not_found_message')}</p>
           <button 
             onClick={() => navigate("/dashboard/products")} 
             className="modern-button primary"
           >
-            {t('edit_product.back_to_products')}
+            {t('dashboard.edit_product.back_to_products')}
           </button>
         </div>
       </div>

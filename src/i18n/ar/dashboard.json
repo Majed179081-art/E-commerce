@@ -19,7 +19,10 @@
     "fetch_categories_error": "فشل جلب بيانات الفئات:",
     "fetch_latest_products_error": "فشل جلب أحدث المنتجات:",
     "fetch_activities_error": "فشل جلب النشاطات:",
-    "unexpected_error": "خطأ غير متوقع في جلب بيانات لوحة التحكم:"
+    "unexpected_error": "خطأ غير متوقع في جلب بيانات لوحة التحكم:",
+    "data_updated": "تم تحديث البيانات بنجاح",
+"operation_failed": "فشلت العملية",
+"network_error": "خطأ في الشبكة. الرجاء التحقق من اتصالك"
   },
   
   "sidebar": {
@@ -239,6 +242,7 @@
     "success_message": "تم تحديث المنتج بنجاح!",
     "generic_error": "حدث خطأ أثناء تعديل المنتج",
     "connection_error": "لا يوجد اتصال بالخادم"
+    
   },
   
   "edit_product": {
@@ -266,7 +270,7 @@
     "cancel": "إلغاء",
     "saving": "جاري الحفظ...",
     "name_required": "اسم المنتج مطلوب",
-    "category_required": "الفئة مطلوبة",
+              "category_required": "الفئة مطلوبة",
     "price_validation": "السعر يجب أن يكون رقماً صحيحاً",
     "max_images_alert": "يمكنك اختيار 5 صور فقط كحد أقصى.",
     "product_not_found": "المنتج غير موجود",

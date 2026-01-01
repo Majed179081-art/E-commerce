@@ -111,7 +111,7 @@ const CheckoutPage = () => {
   if (loading) {
     return (
       <div className={styles.checkoutContainer} data-theme={settings.theme}>
-        <Navbar onOpenCart={handleOpenCart} />
+    
         <div className={styles.loadingContainer}>
           <div className={styles.spinner}></div>
           <p>{t("orders.checkout.loading")}</p>
@@ -122,7 +122,7 @@ const CheckoutPage = () => {
 
   return (
     <div className={styles.checkoutContainer} data-theme={settings.theme}>
-      <Navbar onOpenCart={handleOpenCart} />
+    
       <div className={styles.checkoutContent}>
         <div className={styles.checkoutHeader}>
           <h1>{t("orders.checkout.title")}</h1>

@@ -173,7 +173,7 @@
 }
 
 .statusBadge.pending {
-    background: linear-gradient(135deg, #fff3cd, #ffecb3);
+    background: linear-gradient(135deg, #828277, #ffecb3);
     color: #856404;
     border: 2px solid #ffc107;
 }

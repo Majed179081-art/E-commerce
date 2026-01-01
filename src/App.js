@@ -84,10 +84,11 @@ function App() {
                   <Route path="/register" element={
                     <RequireNoAuth>
                       <Register />
+             
                     </RequireNoAuth>
                   } />
                   <Route path="/settings" element={<CustomerSettings />} />
-                  <Route path="/" element={<HomePage />} />
+                           <Route path="/" element={<HomePage />} />
                   <Route path="/auth/google/callback" element={<GoogleCallback />} />
                   <Route path="/categories" element={<AllCategoriesPage />} />
                   <Route path="/product/:id" element={<ProductDetail />} />

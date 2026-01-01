@@ -52,6 +52,7 @@
     "checkout": {
       "title": "Checkout",
       "shipping_info": "Shipping Information",
+      "total":"Total",
       "review_order": "Review Order",
       "confirmation": "Confirmation",
       "shipping_details": "Shipping Details",
